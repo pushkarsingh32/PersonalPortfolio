@@ -21,7 +21,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    href: "mailto:pushkar@semanticpen.com",
+    href: "mailto:contact@pushkarkathayat.com",
     icon: Mail
   }
 ]
