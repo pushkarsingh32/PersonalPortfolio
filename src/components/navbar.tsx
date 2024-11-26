@@ -9,6 +9,18 @@ export function Navbar() {
   const { theme, setTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault()
+    const href = e.currentTarget.href
+    const targetId = href.replace(/.*\#/, "")
+    const elem = document.getElementById(targetId)
+    elem?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+    setIsMenuOpen(false)
+  }
+
   return (
     <nav className="fixed w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
       <div className="container flex h-16 items-center justify-between">
@@ -22,18 +34,21 @@ export function Navbar() {
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             <Link
               href="#skills"
+              onClick={handleScroll}
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Skills
             </Link>
             <Link
               href="#projects"
+              onClick={handleScroll}
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Projects
             </Link>
             <Link
               href="#contact"
+              onClick={handleScroll}
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Contact
@@ -72,22 +87,22 @@ export function Navbar() {
           <nav className="flex flex-col space-y-4 p-4">
             <Link
               href="#skills"
+              onClick={handleScroll}
               className="transition-colors hover:text-foreground/80 text-foreground/60"
-              onClick={() => setIsMenuOpen(false)}
             >
               Skills
             </Link>
             <Link
               href="#projects"
+              onClick={handleScroll}
               className="transition-colors hover:text-foreground/80 text-foreground/60"
-              onClick={() => setIsMenuOpen(false)}
             >
               Projects
             </Link>
             <Link
               href="#contact"
+              onClick={handleScroll}
               className="transition-colors hover:text-foreground/80 text-foreground/60"
-              onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </Link>
