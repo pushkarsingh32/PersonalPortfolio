@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
-import { Menu, Moon, Sun, X } from "lucide-react"
+import { Menu, Moon, Sun, X, Code2 } from "lucide-react"
 
 export function Navbar() {
   const { theme, setTheme } = useTheme()
@@ -25,10 +25,18 @@ export function Navbar() {
     <nav className="fixed w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold">
-              Portfolio
-            </span>
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="p-2 rounded-full bg-primary/10 text-primary ring-1 ring-primary/25 group-hover:bg-primary/20 transition-all">
+              <Code2 className="w-5 h-5" />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-bold text-base">
+                Pushkar Kathayat
+              </span>
+              <span className="text-xs text-muted-foreground">
+                Full Stack Developer
+              </span>
+            </div>
           </Link>
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
