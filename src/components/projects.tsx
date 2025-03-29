@@ -9,7 +9,7 @@ const projects = [
     title: "Semantic Pen",
     description: "A sophisticated AI content platform featuring advanced LLM integration, web scraping, and intelligent page parsing. Utilizes proxies for data collection and implements AI-powered text generation for high-quality content creation.",
     technologies: ["Next.js", "Node.js", "LLM Integration", "Web Scraping", "AWS", "Cloudflare"],
-    github: "https://github.com/pushkarsingh32",
+    // github: "https://github.com/pushkarsingh32",
     demo: "https://semanticpen.com",
     schema: {
       "@type": "SoftwareApplication",
@@ -198,15 +198,17 @@ export function Projects() {
                 ))}
               </div>
               <div className="flex gap-4 mt-auto pt-4">
-                <a
-                  href={project.github}
-                  className="inline-flex items-center justify-center gap-2 text-sm font-medium transition-colors hover:text-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github className="w-4 h-4" />
-                  GitHub
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    className="inline-flex items-center justify-center gap-2 text-sm font-medium transition-colors hover:text-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Github className="w-4 h-4" />
+                    GitHub
+                  </a>
+                )}
                 <a
                   href={project.demo}
                   className="inline-flex items-center justify-center gap-2 text-sm font-medium transition-colors hover:text-primary"

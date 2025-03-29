@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="container flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-4 pb-8 pt-24 md:pb-12 md:pt-32 lg:py-0">
+    <section className="container flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-4 pb-8 pt-32 md:pb-12 md:pt-40 lg:py-0">
       <div className="absolute inset-0 -z-10 h-full w-full bg-[#fafafa] dark:bg-[#111] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:6rem_4rem]">
         <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_50%_-100%,#d5c5ff20,transparent)]" />
       </div>
@@ -15,9 +15,9 @@ export function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col items-center gap-8 text-center relative"
+        className="flex flex-col items-center gap-8 text-center relative mt-16 md:mt-20"
       >
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -27,12 +27,12 @@ export function Hero() {
               stiffness: 125,
               delay: 0.1
             }}
-            className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black rounded-full text-sm border shadow-md mt-11"
+            className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black rounded-full text-sm border shadow-md"
           >
             <span>Pushkar Kathayat</span>
             <span className="inline-block">👋</span>
           </motion.div>
-          <div className="flex gap-2">
+          <div className="flex gap-3">
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
