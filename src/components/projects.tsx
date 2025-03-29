@@ -28,7 +28,7 @@ const projects = [
     title: "YouTube Transcript Generator",
     description: "A powerful tool that generates transcripts from YouTube videos with advanced speech recognition. Features include multi-language translation and various export formats.",
     technologies: ["Next.js", "Node.js", "Supabase", "Redis", "Express.js"],
-    github: "https://github.com/pushkarsingh32",
+    // github: "https://github.com/pushkarsingh32",
     demo: "https://www.getyoutubetranscript.com",
     schema: {
       "@type": "SoftwareApplication",
