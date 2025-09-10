@@ -108,10 +108,10 @@ export function Hero() {
         className="mt-24 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 opacity-70"
       >
         {[
-          "/logos/next.svg",
+          "/logos/nextjs-icon-dark-background.png",
           "/logos/react.svg",
           "/logos/node.svg",
-          "/logos/aws.svg",
+          "/logos/Amazon_Web_Services_Logo.svg",
           "/logos/supabase.svg"
         ].map((logo, index) => (
           <div
