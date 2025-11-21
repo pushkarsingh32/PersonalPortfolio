@@ -68,11 +68,11 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-4xl font-bold leading-tight tracking-tighter md:text-7xl lg:leading-[1.2] max-w-3xl"
         >
-          Building intelligent
+          Full Stack Developer
           <br />
-          applications with AI
+          turning ideas into
           <br />
-          and modern tech
+          intelligent solutions
         </motion.h1>
 
         <motion.p
@@ -81,8 +81,9 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-zinc-500 dark:text-zinc-400 max-w-[600px] text-lg"
         >
-          Specialized in developing AI-powered applications like Semantic Pen,
-          combining advanced language models with robust full-stack architecture.
+          I build end-to-end applications that solve real problems. From AI-powered tools
+          like Semantic Pen to scalable web platforms—crafting seamless user experiences
+          backed by robust, modern architecture.
         </motion.p>
 
         <motion.div
@@ -95,7 +96,7 @@ export function Hero() {
             href="#projects"
             className="inline-flex h-11 items-center justify-center rounded-md bg-zinc-900 dark:bg-zinc-100 px-8 text-sm font-medium text-zinc-50 dark:text-zinc-900 transition-colors hover:bg-zinc-900/90 dark:hover:bg-zinc-100/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
-            View Projects
+            See My Work
             <ArrowRight className="ml-2 h-4 w-4" />
           </a>
         </motion.div>
