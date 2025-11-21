@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pushkar Kathayat - Full Stack Developer Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      color: #1a1a1a;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 50px;
+      font-size: 11pt;
+    }
+    @media print {
+      body { padding: 20px 40px; font-size: 10pt; }
+      .no-break { page-break-inside: avoid; }
+    }
+    h1 { font-size: 24pt; font-weight: 700; margin-bottom: 4px; color: #111; }
+    h2 { font-size: 12pt; font-weight: 600; color: #333; border-bottom: 2px solid #333; padding-bottom: 4px; margin: 20px 0 12px 0; text-transform: uppercase; letter-spacing: 1px; }
+    h3 { font-size: 11pt; font-weight: 600; color: #111; margin-bottom: 2px; }
+    .subtitle { font-size: 13pt; color: #444; font-weight: 500; margin-bottom: 8px; }
+    .contact { font-size: 10pt; color: #555; margin-bottom: 4px; }
+    .contact a { color: #0066cc; text-decoration: none; }
+    .summary { margin: 16px 0; color: #333; text-align: justify; }
+    .job { margin-bottom: 16px; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+    .job-title { font-weight: 600; color: #111; }
+    .job-company { color: #444; }
+    .job-date { color: #666; font-size: 10pt; }
+    .job-details { margin-top: 6px; padding-left: 18px; }
+    .job-details li { margin-bottom: 4px; color: #333; }
+    .skills-grid { display: grid; grid-template-columns: 120px 1fr; gap: 6px 12px; font-size: 10pt; }
+    .skill-category { font-weight: 600; color: #333; }
+    .skill-list { color: #444; }
+    .project { margin-bottom: 12px; }
+    .project-title { font-weight: 600; color: #111; }
+    .project-title a { color: #0066cc; text-decoration: none; }
+    .project-desc { color: #444; font-size: 10pt; margin: 2px 0; }
+    .project-tech { font-size: 9pt; color: #666; }
+    .education { margin-bottom: 8px; }
+    strong { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PUSHKAR KATHAYAT</h1>
+    <div class="subtitle">Full Stack Developer</div>
+    <div class="contact">
+      pushkarsingh32@yahoo.in |
+      <a href="https://linkedin.com/in/pushkarsingh32">linkedin.com/in/pushkarsingh32</a> |
+      <a href="https://github.com/pushkarsingh32">github.com/pushkarsingh32</a> |
+      <a href="https://pushkarkathayat.com">pushkarkathayat.com</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">Full Stack Developer with 4+ years of experience building production-ready SaaS applications serving thousands of users. Expert in modern web technologies including Next.js 15, React, TypeScript, and Node.js with strong backend skills in PostgreSQL, Redis, and cloud infrastructure (AWS, Cloudflare). Proven track record of shipping 6+ live SaaS products from concept to deployment, including email validation APIs, job platforms, and AI-powered content tools.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-category">Frontend</span>
+      <span class="skill-list">Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI, Radix UI, Framer Motion</span>
+      <span class="skill-category">Backend</span>
+      <span class="skill-list">Node.js, Express.js, tRPC, Python, FastAPI, REST APIs, WebSockets, Hono</span>
+      <span class="skill-category">Databases</span>
+      <span class="skill-list">PostgreSQL, Drizzle ORM, Supabase, Redis, MongoDB, BullMQ</span>
+      <span class="skill-category">Cloud & DevOps</span>
+      <span class="skill-list">AWS (Lambda, EC2, S3, SES), Cloudflare (Workers, R2, Pages), Docker, Vercel, Railway</span>
+      <span class="skill-category">Auth & Payments</span>
+      <span class="skill-list">Better Auth, OAuth 2.0, Passkeys/WebAuthn, Stripe, Dodo Payments</span>
+      <span class="skill-category">Testing</span>
+      <span class="skill-list">Playwright, Jest, Unit Testing, Integration Testing, E2E Testing</span>
+      <span class="skill-category">Practices</span>
+      <span class="skill-list">Agile/Scrum, Code Reviews, Pull Requests, Team Collaboration, Technical Documentation</span>
+      <span class="skill-category">Tools</span>
+      <span class="skill-list">Git, GitHub Actions CI/CD, React Query, Zod, Web Scraping, Chrome Extensions</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Full Stack Developer</span> <span class="job-company">| Contract Projects (Multiple Clients) | Remote</span></div>
+        <span class="job-date">Jan 2024 - Present</span>
+      </div>
+      <ul class="job-details">
+        <li>Designed, developed, and deployed <strong>3 production-grade SaaS applications</strong> using Next.js 15, TypeScript, tRPC, and PostgreSQL</li>
+        <li>Built <strong>VerifyForge</strong>, an email validation API achieving 99%+ accuracy with real-time SMTP verification in &lt;2s</li>
+        <li>Developed <strong>Real Jobs From Anywhere</strong>, a remote job platform aggregating 5,000+ active job listings with BullMQ</li>
+        <li>Created <strong>FinderLaunch</strong>, a product discovery platform curating 988+ projects with Dodo Payments integration</li>
+        <li>Implemented scalable microservices using Docker, AWS Lambda, and Cloudflare Workers</li>
+        <li>Conducted code reviews and maintained high code quality standards through PR-based workflows</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Chief Technology Officer</span> <span class="job-company">| Semantic Pen | Remote</span></div>
+        <span class="job-date">Jan 2023 - Dec 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Led a team of 3 developers, conducting code reviews and mentoring junior developers on best practices</li>
+        <li>Designed AI-powered content platform with LLM integration and vector databases for RAG</li>
+        <li>Implemented custom vectorization pipeline with Supabase GTE for document processing (PDF, DOCX, TXT)</li>
+        <li>Deployed scalable microservices using AWS (Lambda, ECS, S3) and Cloudflare Workers</li>
+        <li>Established Agile workflows with sprint planning, daily standups, and retrospectives</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Full Stack Developer</span> <span class="job-company">| YouTube Transcript Generator | Remote</span></div>
+        <span class="job-date">Mar 2023 - Jul 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Built video transcription tool with multi-language translation and various export formats</li>
+        <li>Designed backend API using Express.js with Redis caching for improved performance</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">CTO & Co-Founder</span> <span class="job-company">| Degions | India</span></div>
+        <span class="job-date">Nov 2018 - Feb 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Developed SEO tools and data-driven solutions using Python and Node.js</li>
+        <li>Built cloud infrastructure with AWS EC2 and S3; published 4 Chrome extensions on Chrome Web Store</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Founder & Technical Lead</span> <span class="job-company">| Techgeekers Blog | India</span></div>
+        <span class="job-date">Mar 2014 - Oct 2018</span>
+      </div>
+      <ul class="job-details">
+        <li>Provided SEO consultancy and built responsive web applications</li>
+        <li>Implemented SEO optimization strategies improving organic traffic</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+
+    <div class="project no-break">
+      <div class="project-title">VerifyForge | <a href="https://verifyforge.com">verifyforge.com</a></div>
+      <div class="project-desc">Email Validation API SaaS with 99%+ accuracy, real-time SMTP verification, disposable detection, and subscription management.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 15, tRPC, PostgreSQL, Redis, Drizzle ORM, BullMQ</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Real Jobs From Anywhere | <a href="https://realjobsfromanywhere.com">realjobsfromanywhere.com</a></div>
+      <div class="project-desc">Remote job platform with 5,000+ active listings, advanced filtering, and real-time job aggregation.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 15, tRPC, PostgreSQL, Better Auth, AWS SES, BullMQ</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">FinderLaunch | <a href="https://finderlaunch.com">finderlaunch.com</a></div>
+      <div class="project-desc">Product discovery platform with 988+ curated projects, community voting, and payment integration.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 15, tRPC, PostgreSQL, Redis, Dodo Payments, Docker</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Semantic Pen | <a href="https://semanticpen.com">semanticpen.com</a></div>
+      <div class="project-desc">AI-powered content platform with RAG-based generation and vector search capabilities.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js, Node.js, Hono, PostgreSQL, AWS, LLM APIs</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">YouTube Transcript Generator | <a href="https://getyoutubetranscript.com">getyoutubetranscript.com</a></div>
+      <div class="project-desc">Video transcription tool with multi-language translation and export formats.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js, Supabase, Redis, Express.js</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Chrome Extensions (Chrome Web Store)</div>
+      <div class="project-desc">Keyword Autocomplete Magic, Open Multiple URLs, Domain Age Checker, Domain Age Finder SERP</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education">
+      <strong>Bachelor of Technology (B.Tech), Computer Science</strong><br>
+      THDC-IHET | 2016
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,147 @@
+PUSHKAR KATHAYAT
+Full Stack Developer
+
+Email: pushkarsingh32@yahoo.in | Phone: Available upon request
+LinkedIn: linkedin.com/in/pushkarsingh32 | GitHub: github.com/pushkarsingh32
+Website: pushkarkathayat.com | Twitter: x.com/pskt45
+
+================================================================================
+PROFESSIONAL SUMMARY
+================================================================================
+
+Full Stack Developer with 4+ years of experience building production-ready SaaS applications serving thousands of users. Expert in modern web technologies including Next.js 15, React, TypeScript, and Node.js with strong backend skills in PostgreSQL, Redis, and cloud infrastructure (AWS, Cloudflare). Proven track record of shipping 6+ live SaaS products from concept to deployment, including email validation APIs, job platforms, and AI-powered content tools. Passionate about clean code, scalable architecture, and delivering exceptional user experiences.
+
+================================================================================
+TECHNICAL SKILLS
+================================================================================
+
+Frontend:        Next.js 15, React 19, TypeScript, Tailwind CSS, Shadcn UI, Radix UI, Framer Motion
+Backend:         Node.js, Express.js, tRPC, Python, FastAPI, REST APIs, WebSockets, Hono
+Databases:       PostgreSQL, Drizzle ORM, Supabase, Redis, MongoDB, BullMQ
+Cloud & DevOps:  AWS (Lambda, EC2, S3, SES), Cloudflare (Workers, R2, Pages), Docker, Vercel, Railway, GitHub Actions
+Auth & Payments: Better Auth, OAuth 2.0, Passkeys/WebAuthn, Stripe, Dodo Payments
+Testing:         Playwright, Jest, Unit Testing, Integration Testing, E2E Testing
+Practices:       Agile/Scrum, Code Reviews, Pull Requests, Team Collaboration, Technical Documentation
+Tools:           Git, GitHub Actions CI/CD, React Query, Zod, SEO Optimization, Web Scraping, Chrome Extensions
+
+================================================================================
+PROFESSIONAL EXPERIENCE
+================================================================================
+
+FULL STACK DEVELOPER
+Contract Projects (Multiple Clients) | Remote
+January 2024 - Present
+
+- Designed, developed, and deployed 3 production-grade SaaS applications using Next.js 15, TypeScript, tRPC, and PostgreSQL
+- Built VerifyForge, an email validation API achieving 99%+ accuracy with real-time SMTP verification completing in under 2 seconds
+- Developed Real Jobs From Anywhere, a remote job platform aggregating 5,000+ active job listings with advanced filtering and real-time job aggregation using BullMQ
+- Created FinderLaunch, a product discovery platform curating 988+ open-source projects with community voting and Dodo Payments integration
+- Implemented scalable microservices architecture using Docker, AWS Lambda, and Cloudflare Workers
+- Designed comprehensive dashboards with subscription management, Better Auth authentication, and payment integration
+- Conducted code reviews and maintained high code quality standards through PR-based workflows
+
+CHIEF TECHNOLOGY OFFICER
+Semantic Pen | Remote
+January 2023 - December 2023
+
+- Led a team of 3 developers, conducting code reviews and mentoring junior developers on best practices
+- Designed and developed an AI-powered content platform using TypeScript, Next.js, Node.js, and Hono
+- Integrated LLMs and vector databases for Retrieval-Augmented Generation (RAG) enabling intelligent content generation
+- Implemented custom vectorization pipeline with Supabase GTE model for document processing (PDF, DOCX, TXT)
+- Deployed scalable microservices using AWS (Lambda, ECS, S3) and Cloudflare Workers
+- Established Agile workflows with sprint planning, daily standups, and retrospectives
+
+FULL STACK DEVELOPER
+YouTube Transcript Generator | Remote
+March 2023 - July 2023
+
+- Built video transcription tool for extracting and generating transcripts from YouTube videos
+- Implemented multi-language translation support and various export formats (TXT, SRT, JSON)
+- Designed backend API using Express.js with Redis caching for improved performance
+- Tech Stack: Next.js, Supabase, Redis, Express.js
+
+CTO & CO-FOUNDER
+Degions | India
+November 2018 - February 2023
+
+- Developed SEO tools and data-driven solutions using Python and Node.js
+- Built and managed cloud infrastructure with AWS EC2 and S3 for high availability
+- Created web scraping solutions using Scrapy and Selenium for data aggregation
+- Led technical strategy and development of multiple client projects
+- Published 4 Chrome extensions on the Chrome Web Store for SEO and productivity
+
+FOUNDER & TECHNICAL LEAD
+Techgeekers Blog | India
+March 2014 - October 2018
+
+- Provided SEO consultancy and built responsive web applications
+- Led full-stack development projects using modern frameworks and tools
+- Implemented SEO optimization strategies improving organic traffic and search rankings
+
+================================================================================
+FEATURED PROJECTS
+================================================================================
+
+VERIFYFORGE | verifyforge.com
+Production-ready Email Validation API SaaS
+- Built hybrid email validation system achieving 99%+ accuracy with real-time SMTP verification
+- Implemented disposable email detection, syntax validation, and MX record checking
+- Designed comprehensive dashboard with subscription management and API key handling
+- Tech Stack: Next.js 15, tRPC, PostgreSQL, Redis, Drizzle ORM, BullMQ
+
+REAL JOBS FROM ANYWHERE | realjobsfromanywhere.com
+Remote Job Platform
+- Developed job aggregation system pulling from multiple sources with 5,000+ active listings
+- Built advanced filtering system with company profiles and job categorization
+- Implemented real-time job updates using BullMQ for background processing
+- Tech Stack: Next.js 15, tRPC, PostgreSQL, Better Auth, AWS SES, BullMQ
+
+FINDERLAUNCH | finderlaunch.com
+Product Discovery & Launch Platform
+- Created platform curating 988+ open-source projects for indie hackers and makers
+- Built community voting system and product showcase features
+- Integrated Dodo Payments for subscription and payment processing
+- Containerized application using Docker for consistent deployment
+- Tech Stack: Next.js 15, tRPC, PostgreSQL, Redis, Dodo Payments, Docker
+
+SEMANTIC PEN | semanticpen.com
+AI-Powered Content Platform
+- Developed RAG-based content generation using LLM integration and vector databases
+- Built document extraction pipeline supporting PDF, DOCX, and TXT formats
+- Implemented similarity search using Supabase GTE embeddings
+- Tech Stack: Next.js, Node.js, Hono, PostgreSQL, AWS, Cloudflare, LLM APIs
+
+YOUTUBE TRANSCRIPT GENERATOR | getyoutubetranscript.com
+Video Transcription Tool
+- Built tool for extracting and generating transcripts from YouTube videos
+- Implemented multi-language translation and various export formats
+- Tech Stack: Next.js, Supabase, Redis, Express.js
+
+URL TO SCREENSHOT | github.com/pushkarsingh32/url_to_screenshot
+Screenshot Capture Service
+- Developed FastAPI-based microservice for capturing high-quality URL screenshots
+- Optimized for RESTful API consumption with efficient resource management
+- Tech Stack: FastAPI, Python, Selenium
+
+CHROME EXTENSIONS (Published on Chrome Web Store)
+- Keyword Autocomplete Magic: Intelligent keyword discovery tool for SEO research
+- Open Multiple URLs: Productivity tool for managing and opening multiple URLs efficiently
+- Domain Age Checker: Tool for revealing website history and credibility
+- Domain Age Finder SERP: Extension for viewing domain age directly in Google search results
+
+================================================================================
+EDUCATION
+================================================================================
+
+Bachelor of Technology (B.Tech), Computer Science
+THDC-IHET | 2016
+
+================================================================================
+ADDITIONAL INFORMATION
+================================================================================
+
+- Successfully launched and maintaining 6+ live SaaS products with active user bases
+- Experience with end-to-end product development from ideation to deployment
+- Strong focus on performance optimization, clean code, and scalable architecture
+- Published multiple Chrome extensions on the Chrome Web Store
+- Active contributor to open-source community
