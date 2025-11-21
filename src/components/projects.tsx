@@ -247,10 +247,10 @@ export function Projects() {
             <Rocket className="w-4 h-4" />
             <span className="text-sm font-medium">Live Products</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Featured Projects
           </h2>
-          <p className="max-w-[600px] text-lg text-muted-foreground">
+          <p className="max-w-[600px] text-base sm:text-lg text-muted-foreground">
             Production-ready SaaS applications serving real users
           </p>
         </motion.div>
@@ -266,10 +266,10 @@ export function Projects() {
               viewport={{ once: true }}
               className="group relative overflow-hidden rounded-3xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300"
             >
-              <div className="grid lg:grid-cols-5 gap-6 p-6 lg:p-8">
+              <div className="grid lg:grid-cols-5 gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
                 {/* Left: Logo and Stats */}
-                <div className="lg:col-span-1 flex lg:flex-col items-center lg:items-start gap-4">
-                  <div className="relative w-16 h-16 lg:w-20 lg:h-20 rounded-2xl overflow-hidden bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-2 flex items-center justify-center">
+                <div className="lg:col-span-1 flex lg:flex-col items-center lg:items-start gap-3 sm:gap-4">
+                  <div className="relative w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-2xl overflow-hidden bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-2 flex items-center justify-center flex-shrink-0">
                     {/* Light mode logo */}
                     <Image
                       src={project.logo.light}
@@ -294,14 +294,14 @@ export function Projects() {
                 </div>
 
                 {/* Middle: Content */}
-                <div className="lg:col-span-3 space-y-4">
-                  <div className="flex items-center gap-3">
-                    <h3 className="text-2xl font-bold">{project.title}</h3>
+                <div className="lg:col-span-3 space-y-3 sm:space-y-4">
+                  <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                    <h3 className="text-xl sm:text-2xl font-bold">{project.title}</h3>
                     <span className="px-2 py-1 text-xs font-medium rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
                       Live
                     </span>
                   </div>
-                  <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -317,7 +317,7 @@ export function Projects() {
                 </div>
 
                 {/* Right: Action */}
-                <div className="lg:col-span-1 flex lg:flex-col lg:justify-center lg:items-end gap-3">
+                <div className="lg:col-span-1 flex lg:flex-col lg:justify-center lg:items-end gap-3 pt-2 lg:pt-0">
                   <LinkButton
                     href={project.demo}
                     target="_blank"

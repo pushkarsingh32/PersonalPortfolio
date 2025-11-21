@@ -63,10 +63,10 @@ export function Skills() {
           <Code2 className="w-4 h-4" />
           <span className="text-sm font-medium">Technical Skills</span>
         </div>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
           Technologies I Work With
         </h2>
-        <p className="max-w-[600px] text-lg text-muted-foreground">
+        <p className="max-w-[600px] text-base sm:text-lg text-muted-foreground">
           A comprehensive toolkit for building modern, scalable web applications
         </p>
       </motion.div>

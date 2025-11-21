@@ -51,10 +51,10 @@ export function Contact() {
             <MessageCircle className="w-4 h-4" />
             <span className="text-sm font-medium">Get in Touch</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             Let's Work Together
           </h2>
-          <p className="max-w-[500px] text-lg text-muted-foreground">
+          <p className="max-w-[500px] text-base sm:text-lg text-muted-foreground">
             Have a project in mind? I'm always open to discussing new opportunities and collaborations.
           </p>
         </motion.div>
@@ -65,22 +65,23 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200 dark:border-zinc-800 p-8 lg:p-12"
+          className="rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 lg:p-12"
         >
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Left: CTA */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold">Ready to start a project?</h3>
-              <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <div className="space-y-4 sm:space-y-6">
+              <h3 className="text-xl sm:text-2xl font-bold">Ready to start a project?</h3>
+              <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 Whether you need a full SaaS application, an API service, or technical consultation,
                 I'd love to hear about your project and see how I can help.
               </p>
               <Button
                 href="mailto:contact@pushkarkathayat.com"
                 variant="primary"
-                size="lg"
+                size="md"
                 icon="arrowUpRight"
                 withShadow
+                className="w-full sm:w-auto"
               >
                 Send an Email
               </Button>

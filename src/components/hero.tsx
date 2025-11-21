@@ -25,7 +25,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-8 relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 p-8 lg:p-12 border border-zinc-200 dark:border-zinc-800"
+            className="lg:col-span-8 relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 p-6 sm:p-8 lg:p-12 border border-zinc-200 dark:border-zinc-800"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-violet-500/10 to-transparent rounded-full blur-2xl" />
 
@@ -48,16 +48,16 @@ export function Hero() {
               </motion.div>
 
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                   <span className="text-zinc-900 dark:text-zinc-100">Hi, I'm </span>
                   <span className="bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-400 bg-clip-text text-transparent">Pushkar</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 font-medium">
+                <p className="text-lg sm:text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 font-medium">
                   Full Stack Developer
                 </p>
               </div>
 
-              <p className="text-zinc-500 dark:text-zinc-400 max-w-xl text-lg leading-relaxed">
+              <p className="text-zinc-500 dark:text-zinc-400 max-w-xl text-base sm:text-lg leading-relaxed">
                 I build production-ready SaaS applications that solve real problems.
                 From email validation APIs to job platforms — crafting scalable
                 solutions with modern architecture.
