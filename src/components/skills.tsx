@@ -27,7 +27,7 @@ const skills = [
     category: "Cloud & DevOps",
     icon: Cloud,
     color: "from-blue-500 to-cyan-500",
-    technologies: ["AWS (Lambda, EC2, S3, SES)", "Cloudflare (Workers, R2, Pages)", "Docker", "Vercel", "Railway", "GitHub Actions"]
+    technologies: ["AWS (Lambda, EC2, S3, SES)", "Cloudflare (Workers, R2, Pages)", "Docker", "Vercel", "Railway", "CI/CD", "GitHub Actions"]
   },
   {
     category: "Database",
@@ -45,7 +45,7 @@ const skills = [
     category: "Tools & Practices",
     icon: Code2,
     color: "from-indigo-500 to-blue-500",
-    technologies: ["Git", "React Query", "Zod", "SEO Optimization", "Web Scraping", "Chrome Extensions"]
+    technologies: ["Git", "Playwright", "Jest", "React Query", "Zod", "Agile/Scrum", "Code Reviews"]
   }
 ]
 
