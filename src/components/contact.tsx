@@ -65,13 +65,13 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 lg:p-12"
+          className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 lg:p-10"
         >
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
             {/* Left: CTA */}
-            <div className="space-y-4 sm:space-y-6">
-              <h3 className="text-xl sm:text-2xl font-bold">Ready to start a project?</h3>
-              <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">Ready to start a project?</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                 Whether you need a full SaaS application, an API service, or technical consultation,
                 I'd love to hear about your project and see how I can help.
               </p>
@@ -81,18 +81,18 @@ export function Contact() {
                 size="md"
                 icon="arrowUpRight"
                 withShadow
-                className="w-full sm:w-auto"
+                className="w-full sm:w-auto !bg-violet-600 !text-white hover:!bg-violet-700"
               >
                 Send an Email
               </Button>
             </div>
 
             {/* Right: Social Links */}
-            <div className="space-y-4">
-              <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
                 Connect with me
               </p>
-              <div className="grid gap-3">
+              <div className="grid gap-2 sm:gap-3">
                 {socialLinks.map((link, index) => {
                   const Icon = link.icon
                   return (
@@ -105,18 +105,18 @@ export function Contact() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
                       viewport={{ once: true }}
-                      className={`group flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 transition-all duration-300 ${link.color}`}
+                      className={`group flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 transition-all duration-300 ${link.color}`}
                     >
-                      <div className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 group-hover:bg-transparent transition-colors">
-                        <Icon className="w-5 h-5" />
+                      <div className="p-1.5 sm:p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 group-hover:bg-transparent transition-colors flex-shrink-0">
+                        <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
-                      <div className="flex-grow">
-                        <p className="font-medium">{link.name}</p>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-inherit transition-colors">
+                      <div className="flex-grow min-w-0">
+                        <p className="font-medium text-sm sm:text-base">{link.name}</p>
+                        <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-inherit transition-colors truncate">
                           {link.username}
                         </p>
                       </div>
-                      <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
                     </motion.a>
                   )
                 })}
