@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Sparkles, Code2, Layers, Zap } from "lucide-react"
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 export function Hero() {
   return (
@@ -33,13 +34,17 @@ export function Hero() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-sm"
               >
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                <span className="text-sm font-medium">Available for projects</span>
+                {/* Profile Picture */}
+                <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-zinc-200 dark:border-zinc-700 shadow-lg">
+                  <Image
+                    src="/pushkar_kathayat_face_pic.png"
+                    alt="Pushkar Kathayat"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </motion.div>
 
               <div className="space-y-4">
@@ -72,6 +77,7 @@ export function Hero() {
                   href="#contact"
                   variant="secondary"
                   size="lg"
+                  icon="arrowRight"
                 >
                   Get in Touch
                 </Button>
