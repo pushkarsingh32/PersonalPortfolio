@@ -1,134 +1,161 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import Image from "next/image"
+import { Sparkles, Code2, Layers, Zap } from "lucide-react"
+import { Button } from '@/components/ui/button'
 
 export function Hero() {
   return (
-    <section className="container flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-4 pb-8 pt-32 md:pb-12 md:pt-40 lg:py-0">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-[#fafafa] dark:bg-[#111] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:6rem_4rem]">
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_50%_-100%,#d5c5ff20,transparent)]" />
+    <section className="container flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-4 pb-8 pt-24 md:pb-12 md:pt-32">
+      {/* Background Effects */}
+      <div className="absolute inset-0 -z-10 h-full w-full overflow-hidden">
+        <div className="absolute inset-0 bg-[#fafafa] dark:bg-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] bg-gradient-to-b from-violet-500/10 via-transparent to-transparent blur-3xl" />
+        <div className="absolute right-0 top-1/4 h-[300px] w-[300px] bg-gradient-to-l from-emerald-500/10 to-transparent blur-3xl" />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col items-center gap-8 text-center relative mt-16 md:mt-20"
-      >
-        <div className="flex flex-col items-center gap-6">
+      {/* Main Bento Grid */}
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-6">
+
+          {/* Main Hero Card - Spans 8 columns */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.5,
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1
-            }}
-            className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-black rounded-full text-sm border shadow-md"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-8 relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 p-8 lg:p-12 border border-zinc-200 dark:border-zinc-800"
           >
-            <span>Pushkar Kathayat</span>
-            <span className="inline-block">👋</span>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-violet-500/10 to-transparent rounded-full blur-2xl" />
+
+            <div className="relative z-10 space-y-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-sm"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span className="text-sm font-medium">Available for projects</span>
+              </motion.div>
+
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                  <span className="text-zinc-900 dark:text-zinc-100">Hi, I'm </span>
+                  <span className="bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-indigo-400 bg-clip-text text-transparent">Pushkar</span>
+                </h1>
+                <p className="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 font-medium">
+                  Full Stack Developer
+                </p>
+              </div>
+
+              <p className="text-zinc-500 dark:text-zinc-400 max-w-xl text-lg leading-relaxed">
+                I build production-ready SaaS applications that solve real problems.
+                From email validation APIs to job platforms — crafting scalable
+                solutions with modern architecture.
+              </p>
+
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button
+                  href="#projects"
+                  variant="primary"
+                  size="lg"
+                  icon="arrowRight"
+                  withShadow
+                >
+                  View Projects
+                </Button>
+                <Button
+                  href="#contact"
+                  variant="secondary"
+                  size="lg"
+                >
+                  Get in Touch
+                </Button>
+              </div>
+            </div>
           </motion.div>
-          <div className="flex gap-3">
+
+          {/* Side Cards - Stack on right */}
+          <div className="lg:col-span-4 flex flex-col gap-4 lg:gap-6">
+
+            {/* Stats Card */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                type: "spring",
-                stiffness: 125,
-                delay: 0.2
-              }}
-              className="px-4 py-1 bg-zinc-100 dark:bg-zinc-900 rounded-full text-sm text-zinc-900 dark:text-zinc-100"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-1 rounded-3xl bg-gradient-to-br from-violet-500 to-indigo-600 p-6 lg:p-8 text-white relative overflow-hidden"
             >
-              Full Stack Developer
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+              <div className="relative z-10">
+                <Sparkles className="w-8 h-8 mb-4 opacity-80" />
+                <div className="text-4xl lg:text-5xl font-bold mb-2">6+</div>
+                <p className="text-violet-100 font-medium">Live SaaS Projects</p>
+              </div>
             </motion.div>
+
+            {/* Tech Stack Card */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 0.5,
-                type: "spring",
-                stiffness: 125,
-                delay: 0.3
-              }}
-              className="px-4 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-900 dark:text-purple-100 rounded-full text-sm"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex-1 rounded-3xl bg-zinc-100 dark:bg-zinc-900 p-6 lg:p-8 border border-zinc-200 dark:border-zinc-800"
             >
-              AI Engineer
+              <Code2 className="w-8 h-8 mb-4 text-zinc-600 dark:text-zinc-400" />
+              <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-3">Core Stack</p>
+              <div className="flex flex-wrap gap-2">
+                {["Next.js", "TypeScript", "PostgreSQL", "tRPC"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 text-xs font-medium rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-4xl font-bold leading-tight tracking-tighter md:text-7xl lg:leading-[1.2] max-w-3xl"
-        >
-          Full Stack Developer
-          <br />
-          turning ideas into
-          <br />
-          intelligent solutions
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-zinc-500 dark:text-zinc-400 max-w-[600px] text-lg"
-        >
-          I build end-to-end applications that solve real problems. From AI-powered tools
-          like Semantic Pen to scalable web platforms—crafting seamless user experiences
-          backed by robust, modern architecture.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex gap-4"
-        >
-          <a
-            href="#projects"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-zinc-900 dark:bg-zinc-100 px-8 text-sm font-medium text-zinc-50 dark:text-zinc-900 transition-colors hover:bg-zinc-900/90 dark:hover:bg-zinc-100/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            See My Work
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-24 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 opacity-70"
-      >
-        {[
-          "/logos/nextjs-icon-dark-background.png",
-          "/logos/react.svg",
-          "/logos/node.svg",
-          "/logos/Amazon_Web_Services_Logo.svg",
-          "/logos/supabase.svg"
-        ].map((logo, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-center grayscale transition-all hover:grayscale-0 hover:opacity-100"
-          >
-            <Image
-              src={logo}
-              alt="Technology logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto object-contain"
-            />
-          </div>
-        ))}
-      </motion.div>
+        {/* Bottom Row - Feature Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mt-4 lg:mt-6">
+          {[
+            {
+              icon: Layers,
+              title: "Full Stack",
+              description: "End-to-end development from database to deployment",
+              gradient: "from-emerald-500/10 to-teal-500/10"
+            },
+            {
+              icon: Zap,
+              title: "Performance",
+              description: "Optimized for speed with modern caching strategies",
+              gradient: "from-amber-500/10 to-orange-500/10"
+            },
+            {
+              icon: Code2,
+              title: "Clean Code",
+              description: "Type-safe, maintainable, and well-documented",
+              gradient: "from-blue-500/10 to-cyan-500/10"
+            }
+          ].map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              className={`rounded-2xl bg-gradient-to-br ${feature.gradient} dark:from-zinc-900 dark:to-zinc-900 p-6 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors`}
+            >
+              <feature.icon className="w-6 h-6 text-zinc-700 dark:text-zinc-300 mb-3" />
+              <h3 className="font-semibold text-zinc-900 dark:text-zinc-100 mb-1">{feature.title}</h3>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">{feature.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
   )
-} 
+}

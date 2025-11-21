@@ -3,13 +3,22 @@
 import * as React from "react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
-import { Menu, Moon, Sun, X, Code2 } from "lucide-react"
+import { Menu, Moon, Sun, X } from "lucide-react"
 
 export function Navbar() {
   const { theme, setTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [scrolled, setScrolled] = React.useState(false)
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault()
     const href = e.currentTarget.href
     const targetId = href.replace(/.*\#/, "")
@@ -22,101 +31,95 @@ export function Navbar() {
   }
 
   return (
-    <nav className="fixed w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+      scrolled
+        ? "bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-200 dark:border-zinc-800"
+        : "bg-transparent"
+    }`}>
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-full bg-primary/10 text-primary ring-1 ring-primary/25 group-hover:bg-primary/20 transition-all">
-              <Code2 className="w-5 h-5" />
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-violet-500/20">
+              PK
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-base">
-                Pushkar Kathayat
-              </span>
-              <span className="text-xs text-muted-foreground">
-                Full Stack Developer
-              </span>
-            </div>
-          </Link>
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          </div>
+          <div className="hidden sm:flex flex-col">
+            <span className="font-semibold text-sm">
+              Pushkar Kathayat
+            </span>
+            <span className="text-xs text-muted-foreground">
+              Full Stack Developer
+            </span>
+          </div>
+        </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-1">
+          {[
+            { href: "#skills", label: "Skills" },
+            { href: "#projects", label: "Projects" },
+            { href: "#contact", label: "Contact" }
+          ].map((item) => (
             <Link
-              href="#skills"
-              onClick={handleScroll}
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              key={item.href}
+              href={item.href}
+              onClick={handleScrollTo}
+              className="px-4 py-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
             >
-              Skills
+              {item.label}
             </Link>
-            <Link
-              href="#projects"
-              onClick={handleScroll}
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              onClick={handleScroll}
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Contact
-            </Link>
-          </nav>
+          ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        {/* Right Actions */}
+        <div className="flex items-center gap-2">
+          {/* Theme Toggle */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9"
+            className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+            aria-label="Toggle theme"
           >
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
+            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
           </button>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 md:hidden"
+            className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors md:hidden"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-[1.2rem] w-[1.2rem]" />
+              <X className="h-5 w-5" />
             ) : (
-              <Menu className="h-[1.2rem] w-[1.2rem]" />
+              <Menu className="h-5 w-5" />
             )}
-            <span className="sr-only">Toggle menu</span>
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t bg-background">
-          <nav className="flex flex-col space-y-4 p-4">
-            <Link
-              href="#skills"
-              onClick={handleScroll}
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Skills
-            </Link>
-            <Link
-              href="#projects"
-              onClick={handleScroll}
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              onClick={handleScroll}
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-            >
-              Contact
-            </Link>
+        <div className="md:hidden bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800">
+          <nav className="container flex flex-col py-4 gap-2">
+            {[
+              { href: "#skills", label: "Skills" },
+              { href: "#projects", label: "Projects" },
+              { href: "#contact", label: "Contact" }
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={handleScrollTo}
+                className="px-4 py-3 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
         </div>
       )}
     </nav>
   )
-} 
+}

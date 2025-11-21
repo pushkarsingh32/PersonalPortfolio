@@ -7,31 +7,31 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pushkarkathayat.com'),
-  title: 'Pushkar Kathayat - Full Stack Developer & AI Engineer',
-  description: 'Full Stack Developer and AI Engineer specializing in building intelligent applications. Creator of Semantic Pen, an AI-powered content writing platform.',
-  keywords: 'Pushkar Kathayat, Full Stack Developer, AI Engineer, Next.js, React, Node.js, Semantic Pen, AI Applications',
+  title: 'Pushkar Kathayat - Full Stack Developer',
+  description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen. Specializing in Next.js, TypeScript, and scalable web architecture.',
+  keywords: 'Pushkar Kathayat, Full Stack Developer, Next.js, React, TypeScript, Node.js, VerifyForge, FinderLaunch, Real Jobs From Anywhere, Semantic Pen, Web Development',
   authors: [{ name: 'Pushkar Kathayat' }],
   creator: 'Pushkar Kathayat',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    title: 'Pushkar Kathayat - Full Stack Developer & AI Engineer',
-    description: 'Full Stack Developer and AI Engineer specializing in building intelligent applications. Creator of Semantic Pen, an AI-powered content writing platform.',
+    title: 'Pushkar Kathayat - Full Stack Developer',
+    description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen.',
     siteName: 'Pushkar Kathayat Portfolio',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Pushkar Kathayat - Full Stack Developer & AI Engineer'
+        alt: 'Pushkar Kathayat - Full Stack Developer'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pushkar Kathayat - Full Stack Developer & AI Engineer',
-    description: 'Full Stack Developer and AI Engineer specializing in building intelligent applications. Creator of Semantic Pen, an AI-powered content writing platform.',
+    title: 'Pushkar Kathayat - Full Stack Developer',
+    description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen.',
     creator: '@pskt45',
     images: ['/og-image.png']
   },
@@ -53,7 +53,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Pushkar Kathayat',
-  jobTitle: 'Full Stack Developer & AI Engineer',
+  jobTitle: 'Full Stack Developer',
   url: 'https://pushkarkathayat.com',
   sameAs: [
     'https://github.com/pushkarsingh32',
@@ -62,21 +62,22 @@ const jsonLd = {
   ],
   knowsAbout: [
     'Full Stack Development',
-    'Artificial Intelligence',
+    'SaaS Development',
     'Next.js',
     'React',
+    'TypeScript',
     'Node.js',
+    'PostgreSQL',
     'AWS',
     'Supabase',
-    'LLM Integration',
     'Web Development',
-    'SEO'
+    'API Development'
   ],
   alumniOf: 'Computer Science',
   worksFor: {
     '@type': 'Organization',
-    name: 'Semantic Pen',
-    url: 'https://semanticpen.com'
+    name: 'VerifyForge',
+    url: 'https://verifyforge.com'
   },
   mainEntityOfPage: {
     '@type': 'WebSite',
@@ -110,4 +111,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}
