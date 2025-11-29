@@ -142,6 +142,60 @@ const otherProjects = [
         "name": "Pushkar Kathayat"
       }
     }
+  },
+  {
+    title: "Semantic Interlinker",
+    description: "Professional tool for discovering internal linking opportunities using semantic analysis and BERT embeddings. Analyzes web pages to identify semantically related content and suggest strategic linking opportunities.",
+    technologies: ["Python", "BERT", "NLP", "Sentence Transformers", "Scrapy"],
+    github: "https://github.com/pushkarsingh32/Semantic-Interlinker",
+    schema: {
+      "@type": "SoftwareApplication",
+      "name": "Semantic Interlinker",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "description": "Tool for discovering internal linking opportunities using semantic analysis and BERT embeddings",
+      "url": "https://github.com/pushkarsingh32/Semantic-Interlinker",
+      "author": {
+        "@type": "Person",
+        "name": "Pushkar Kathayat"
+      }
+    }
+  },
+  {
+    title: "PAA Scraper",
+    description: "Professional Python tool for extracting 'People Also Ask' questions from Google search results. Features CLI interface, REST API, batch processing, and Docker support for easy integration.",
+    technologies: ["Python", "Flask", "Beautiful Soup", "Docker"],
+    github: "https://github.com/pushkarsingh32/paa-scraper",
+    schema: {
+      "@type": "SoftwareApplication",
+      "name": "PAA Scraper",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "description": "Tool for extracting 'People Also Ask' questions from Google search results",
+      "url": "https://github.com/pushkarsingh32/paa-scraper",
+      "author": {
+        "@type": "Person",
+        "name": "Pushkar Kathayat"
+      }
+    }
+  },
+  {
+    title: "WordPress Article Uploader",
+    description: "Automated WordPress article uploader with NLP-based tag generation. Upload DOCX files to WordPress sites with intelligent title processing, multi-site support, and comprehensive logging.",
+    technologies: ["Python", "Selenium", "spaCy", "NLTK"],
+    github: "https://github.com/pushkarsingh32/wordpress-article-uploader",
+    schema: {
+      "@type": "SoftwareApplication",
+      "name": "WordPress Article Uploader",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "description": "Automated tool for uploading DOCX articles to WordPress sites with NLP-based tag generation",
+      "url": "https://github.com/pushkarsingh32/wordpress-article-uploader",
+      "author": {
+        "@type": "Person",
+        "name": "Pushkar Kathayat"
+      }
+    }
   }
 ]
 
