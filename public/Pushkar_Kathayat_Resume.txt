@@ -123,6 +123,11 @@ Screenshot Capture Service
 - Optimized for RESTful API consumption with efficient resource management
 - Tech Stack: FastAPI, Python, Selenium
 
+PYTHON TOOLS & AUTOMATION
+- Semantic Interlinker | github.com/pushkarsingh32/Semantic-Interlinker: SEO tool using BERT embeddings for internal linking discovery
+- PAA Scraper | github.com/pushkarsingh32/paa-scraper: Google "People Also Ask" extractor with Flask API and Docker support
+- WordPress Article Uploader | github.com/pushkarsingh32/wordpress-article-uploader: Automated content uploader with NLP-based tag generation
+
 CHROME EXTENSIONS (Published on Chrome Web Store)
 - Keyword Autocomplete Magic: Intelligent keyword discovery tool for SEO research
 - Open Multiple URLs: Productivity tool for managing and opening multiple URLs efficiently

@@ -89,6 +89,11 @@ AI-powered content platform with RAG-based generation and vector search capabili
 Video transcription tool with multi-language translation and export formats.
 **Tech:** Next.js, Supabase, Redis, Express.js
 
+### Python Tools & Automation
+- **Semantic Interlinker** | [github.com/pushkarsingh32/Semantic-Interlinker](https://github.com/pushkarsingh32/Semantic-Interlinker) - SEO tool using BERT embeddings for internal linking discovery
+- **PAA Scraper** | [github.com/pushkarsingh32/paa-scraper](https://github.com/pushkarsingh32/paa-scraper) - Google "People Also Ask" extractor with Flask API and Docker support
+- **WordPress Article Uploader** | [github.com/pushkarsingh32/wordpress-article-uploader](https://github.com/pushkarsingh32/wordpress-article-uploader) - Automated content uploader with NLP-based tag generation
+
 ### Chrome Extensions (Chrome Web Store)
 - Keyword Autocomplete Magic - SEO keyword discovery
 - Open Multiple URLs - Productivity tool
