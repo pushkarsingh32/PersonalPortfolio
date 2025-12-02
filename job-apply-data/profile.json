@@ -62,8 +62,9 @@
     },
     "ai_ml": {
       "llm_integration": ["OpenAI API", "GPT-4", "GPT-4o", "Google Gemini", "Groq", "OpenRouter"],
-      "frameworks": ["LangChain", "Sentence Transformers", "BERT"],
-      "techniques": ["RAG (Retrieval-Augmented Generation)", "Vector Embeddings", "Semantic Search", "Prompt Engineering"],
+      "frameworks": ["Vercel AI SDK", "LangChain", "Sentence Transformers", "BERT"],
+      "llm_providers": ["OpenAI", "OpenRouter", "Google AI", "Groq"],
+      "techniques": ["RAG (Retrieval-Augmented Generation)", "Vector Embeddings", "Semantic Search", "Prompt Engineering", "Streaming Responses"],
       "nlp": ["spaCy", "NLTK"],
       "proficiency": "Advanced"
     },
@@ -392,7 +393,7 @@
       "Frontend Engineer",
       "Software Engineer"
     ],
-    "work_type": ["Remote", "Hybrid"],
+    "work_type": ["Remote", "Hybrid", "On-site"],
     "employment_type": ["Full-time", "Contract"],
     "preferred_stack": ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS", "Cloudflare"],
     "interested_in": [
@@ -461,10 +462,10 @@
         "impact": "100k+ articles generated, <3s latency, 60% cost reduction via caching"
       },
       {
-        "name": "Multi-LLM Integration",
-        "description": "Created adapter layer for consistent API across OpenAI, Gemini, Groq with streaming support",
-        "tech": ["OpenAI API", "Google AI", "Groq", "SSE"],
-        "impact": "Flexible provider switching, cost optimization"
+        "name": "Multi-LLM Integration with Vercel AI SDK & OpenRouter",
+        "description": "Built unified LLM integration using Vercel AI SDK and OpenRouter for seamless provider switching. Implemented streaming responses with SSE, context management, and fallback strategies across OpenAI, Gemini, Groq, and 100+ models via OpenRouter",
+        "tech": ["Vercel AI SDK", "OpenRouter", "OpenAI API", "Google AI", "Groq", "SSE"],
+        "impact": "Flexible provider switching, cost optimization, access to 100+ models, improved reliability with fallbacks"
       },
       {
         "name": "Semantic Interlinker",
@@ -479,7 +480,6 @@
     "languages": ["English (Fluent)", "Hindi (Native)"],
     "hobbies": ["Building side projects", "Open source contributions", "SEO research", "Tech blogging"],
     "interesting_facts": [
-      "Shipped first SaaS at age 24",
       "Built and published 4 Chrome extensions",
       "Self-taught in AI/ML and vector databases",
       "Founded 2 startups (Degions, Techgeekers)"
