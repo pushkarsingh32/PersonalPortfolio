@@ -1,0 +1,488 @@
+{
+  "personal": {
+    "name": "Pushkar Kathayat",
+    "email": "contact@pushkarkathayat.com",
+    "alternateEmail": "pushkarsingh32@yahoo.in",
+    "phone": "",
+    "location": {
+      "current": "India",
+      "willing_to_relocate": true,
+      "remote_preference": "Remote-first"
+    },
+    "links": {
+      "portfolio": "https://pushkarkathayat.com",
+      "github": "https://github.com/pushkarsingh32",
+      "linkedin": "https://linkedin.com/in/pushkarsingh32",
+      "twitter": "",
+      "resume_pdf": "https://pushkarkathayat.com/pushkar_singh_resume.pdf"
+    }
+  },
+
+  "professional_summary": {
+    "title": "Full Stack Developer",
+    "years_of_experience": "4+",
+    "tagline": "Building production-ready SaaS applications serving thousands of users",
+    "summary": "Full Stack Developer with 4+ years of experience building production-ready SaaS applications serving thousands of users. Expert in modern web technologies including Next.js, React, TypeScript, and Node.js with strong backend skills in PostgreSQL, Redis, and cloud infrastructure (AWS, Cloudflare). Proven track record of shipping 6+ live SaaS products from concept to deployment, including email validation APIs, job platforms, and AI-powered content tools.",
+    "key_achievements": [
+      "Shipped 6+ production SaaS applications with active user bases",
+      "Built email validation API achieving 99%+ accuracy",
+      "Developed job platform aggregating 5,000+ listings",
+      "Published 4 Chrome extensions on Chrome Web Store",
+      "Led development teams with Agile/Scrum methodologies",
+      "Expertise in microservices architecture with Docker and AWS"
+    ]
+  },
+
+  "technical_skills": {
+    "frontend": {
+      "frameworks": ["Next.js 15", "React 19", "TypeScript"],
+      "styling": ["Tailwind CSS", "Shadcn UI", "Radix UI", "Framer Motion"],
+      "state_management": ["React Query", "Zustand"],
+      "form_handling": ["React Hook Form", "Zod"],
+      "proficiency": "Expert"
+    },
+    "backend": {
+      "languages": ["Node.js", "TypeScript", "Python"],
+      "frameworks": ["Express.js", "tRPC", "FastAPI", "Hono"],
+      "apis": ["REST APIs", "WebSockets", "GraphQL"],
+      "proficiency": "Expert"
+    },
+    "databases": {
+      "sql": ["PostgreSQL", "Drizzle ORM", "Supabase"],
+      "nosql": ["MongoDB", "Redis"],
+      "queue_systems": ["BullMQ"],
+      "vector_db": ["pgvector", "Supabase Vector"],
+      "proficiency": "Advanced"
+    },
+    "cloud_devops": {
+      "platforms": ["AWS (Lambda, EC2, S3, SES)", "Cloudflare (Workers, R2, Pages)", "Vercel", "Railway", "DigitalOcean"],
+      "containerization": ["Docker", "Docker Compose"],
+      "ci_cd": ["GitHub Actions"],
+      "proficiency": "Advanced"
+    },
+    "ai_ml": {
+      "llm_integration": ["OpenAI API", "GPT-4", "GPT-4o", "Google Gemini", "Groq", "OpenRouter"],
+      "frameworks": ["LangChain", "Sentence Transformers", "BERT"],
+      "techniques": ["RAG (Retrieval-Augmented Generation)", "Vector Embeddings", "Semantic Search", "Prompt Engineering"],
+      "nlp": ["spaCy", "NLTK"],
+      "proficiency": "Advanced"
+    },
+    "auth_payments": {
+      "auth": ["Better Auth", "OAuth 2.0", "Passkeys/WebAuthn"],
+      "payments": ["Stripe", "Dodo Payments"],
+      "proficiency": "Advanced"
+    },
+    "testing": {
+      "frameworks": ["Playwright", "Jest"],
+      "types": ["Unit Testing", "Integration Testing", "E2E Testing"],
+      "proficiency": "Intermediate"
+    },
+    "practices": {
+      "methodologies": ["Agile/Scrum", "Code Reviews", "Pull Requests"],
+      "collaboration": ["Team Collaboration", "Technical Documentation"],
+      "version_control": ["Git", "GitHub"],
+      "proficiency": "Expert"
+    },
+    "other_tools": {
+      "web_scraping": ["Scrapy", "Selenium", "Beautiful Soup"],
+      "browser_extensions": ["Chrome Extension API"],
+      "seo": ["SEO Optimization", "SERP Analysis"],
+      "proficiency": "Advanced"
+    }
+  },
+
+  "work_experience": [
+    {
+      "title": "Full Stack Developer",
+      "company": "Contract Projects (Multiple Clients)",
+      "type": "Contract",
+      "location": "Remote",
+      "start_date": "2024-01",
+      "end_date": "Present",
+      "current": true,
+      "responsibilities": [
+        "Designed, developed, and deployed 3 production-grade SaaS applications using Next.js 15, TypeScript, tRPC, and PostgreSQL",
+        "Built VerifyForge, an email validation API achieving 99%+ accuracy with real-time SMTP verification in <2s",
+        "Developed Real Jobs From Anywhere, a remote job platform aggregating 5,000+ active job listings with BullMQ",
+        "Created FinderLaunch, a product discovery platform curating 988+ projects with Dodo Payments integration",
+        "Implemented scalable microservices using Docker, AWS Lambda, and Cloudflare Workers",
+        "Conducted code reviews and maintained high code quality standards through PR-based workflows"
+      ],
+      "tech_stack": ["Next.js 15", "TypeScript", "tRPC", "PostgreSQL", "Redis", "Docker", "AWS", "Cloudflare Workers", "BullMQ"]
+    },
+    {
+      "title": "Chief Technology Officer",
+      "company": "Semantic Pen",
+      "type": "Full-time",
+      "location": "Remote",
+      "start_date": "2023-01",
+      "end_date": "2023-12",
+      "current": false,
+      "responsibilities": [
+        "Led a team of 3 developers, conducting code reviews and mentoring junior developers on best practices",
+        "Designed AI-powered content platform with LLM integration and vector databases for RAG",
+        "Implemented custom vectorization pipeline with Supabase GTE for document processing (PDF, DOCX, TXT)",
+        "Deployed scalable microservices using AWS (Lambda, ECS, S3) and Cloudflare Workers",
+        "Established Agile workflows with sprint planning, daily standups, and retrospectives"
+      ],
+      "tech_stack": ["Next.js", "Node.js", "Hono", "PostgreSQL", "AWS", "Cloudflare", "LLM APIs", "Vector Databases"]
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "YouTube Transcript Generator",
+      "type": "Contract",
+      "location": "Remote",
+      "start_date": "2023-03",
+      "end_date": "2023-07",
+      "current": false,
+      "responsibilities": [
+        "Built video transcription tool with multi-language translation and various export formats",
+        "Designed backend API using Express.js with Redis caching for improved performance"
+      ],
+      "tech_stack": ["Next.js", "Supabase", "Redis", "Express.js"]
+    },
+    {
+      "title": "CTO & Co-Founder",
+      "company": "Degions",
+      "type": "Co-founder",
+      "location": "India",
+      "start_date": "2018-11",
+      "end_date": "2023-02",
+      "current": false,
+      "responsibilities": [
+        "Developed SEO tools and data-driven solutions using Python and Node.js",
+        "Built cloud infrastructure with AWS EC2 and S3; published 4 Chrome extensions"
+      ],
+      "tech_stack": ["Python", "Node.js", "AWS", "Chrome Extensions"]
+    },
+    {
+      "title": "Founder & Technical Lead",
+      "company": "Techgeekers Blog",
+      "type": "Founder",
+      "location": "India",
+      "start_date": "2014-03",
+      "end_date": "2018-10",
+      "current": false,
+      "responsibilities": [
+        "Provided SEO consultancy and built responsive web applications",
+        "Implemented SEO optimization strategies improving organic traffic"
+      ],
+      "tech_stack": ["WordPress", "SEO", "Web Development"]
+    }
+  ],
+
+  "projects": {
+    "featured": [
+      {
+        "name": "VerifyForge",
+        "url": "https://verifyforge.com",
+        "github": null,
+        "type": "SaaS",
+        "status": "Live",
+        "description": "Production-ready Email Validation API SaaS platform with hybrid validation achieving 99%+ accuracy. Features real-time SMTP verification, disposable detection, and comprehensive dashboard with subscription management.",
+        "tech_stack": ["Next.js 15", "tRPC", "PostgreSQL", "Redis", "Drizzle ORM", "BullMQ"],
+        "key_features": [
+          "Real-time SMTP verification < 2s",
+          "99%+ accuracy with hybrid validation",
+          "Disposable email detection",
+          "Subscription management",
+          "API key handling",
+          "Comprehensive dashboard"
+        ],
+        "metrics": {
+          "response_time": "<2s",
+          "accuracy": "99%+",
+          "status": "Production"
+        }
+      },
+      {
+        "name": "Real Jobs From Anywhere",
+        "url": "https://realjobsfromanywhere.com",
+        "github": null,
+        "type": "SaaS",
+        "status": "Live",
+        "description": "Remote job platform connecting global job seekers with curated opportunities from leading companies. Features advanced filtering, company profiles, and real-time job aggregation from multiple sources.",
+        "tech_stack": ["Next.js 15", "tRPC", "PostgreSQL", "Better Auth", "AWS SES", "BullMQ"],
+        "key_features": [
+          "Advanced filtering system",
+          "Company profiles",
+          "Real-time job aggregation",
+          "5,000+ active listings",
+          "Job alerts",
+          "Background processing with BullMQ"
+        ],
+        "metrics": {
+          "active_jobs": "5000+",
+          "status": "Production"
+        }
+      },
+      {
+        "name": "FinderLaunch",
+        "url": "https://finderlaunch.com",
+        "github": null,
+        "type": "SaaS",
+        "status": "Live",
+        "description": "Product discovery and launch platform for makers and founders. Curates 988+ open-source projects with community voting, product showcases, and comprehensive launch tools for indie hackers.",
+        "tech_stack": ["Next.js 15", "tRPC", "PostgreSQL", "Redis", "Dodo Payments", "Docker"],
+        "key_features": [
+          "Community voting system",
+          "Product showcases",
+          "Payment integration",
+          "Docker deployment",
+          "Feature flags",
+          "Admin dashboard"
+        ],
+        "metrics": {
+          "curated_projects": "988+",
+          "status": "Production"
+        }
+      },
+      {
+        "name": "Semantic Pen",
+        "url": "https://semanticpen.com",
+        "github": null,
+        "type": "SaaS",
+        "status": "Live",
+        "description": "AI content platform with advanced LLM integration and intelligent page parsing for high-quality content generation.",
+        "tech_stack": ["Next.js", "Node.js", "LLM Integration", "AWS", "Hono", "PostgreSQL", "Vector Databases"],
+        "key_features": [
+          "RAG-based content generation",
+          "Multi-LLM integration (OpenAI, Gemini, Groq)",
+          "Document processing (PDF, DOCX, TXT)",
+          "Vector embeddings with pgvector",
+          "Semantic search",
+          "Streaming responses"
+        ],
+        "metrics": {
+          "users": "10000+",
+          "articles_generated": "100000+",
+          "first_token_latency": "<3s",
+          "status": "Production"
+        }
+      },
+      {
+        "name": "YouTube Transcript Generator",
+        "url": "https://www.getyoutubetranscript.com",
+        "github": null,
+        "type": "Tool",
+        "status": "Live",
+        "description": "Tool for generating transcripts from YouTube videos with multi-language translation and various export formats.",
+        "tech_stack": ["Next.js", "Supabase", "Redis", "Express.js"],
+        "key_features": [
+          "Multi-language translation",
+          "Export formats (TXT, SRT, JSON)",
+          "Redis caching"
+        ],
+        "metrics": {
+          "status": "Live"
+        }
+      }
+    ],
+    "python_tools": [
+      {
+        "name": "Semantic Interlinker",
+        "url": null,
+        "github": "https://github.com/pushkarsingh32/Semantic-Interlinker",
+        "type": "Open Source Tool",
+        "status": "Published",
+        "description": "Professional tool for discovering internal linking opportunities using semantic analysis and BERT embeddings. Analyzes web pages to identify semantically related content and suggest strategic linking opportunities.",
+        "tech_stack": ["Python", "BERT", "NLP", "Sentence Transformers", "Scrapy"],
+        "key_features": [
+          "BERT-based semantic analysis",
+          "Intelligent clustering",
+          "Web scraping",
+          "Multiple export formats (Excel, JSON)",
+          "CLI interface"
+        ]
+      },
+      {
+        "name": "PAA Scraper",
+        "url": null,
+        "github": "https://github.com/pushkarsingh32/paa-scraper",
+        "type": "Open Source Tool",
+        "status": "Published",
+        "description": "Professional Python tool for extracting 'People Also Ask' questions from Google search results. Features CLI interface, REST API, batch processing, and Docker support for easy integration.",
+        "tech_stack": ["Python", "Flask", "Beautiful Soup", "Docker"],
+        "key_features": [
+          "CLI interface",
+          "REST API with Flask",
+          "Batch processing",
+          "Docker support",
+          "Authentication"
+        ]
+      },
+      {
+        "name": "WordPress Article Uploader",
+        "url": null,
+        "github": "https://github.com/pushkarsingh32/wordpress-article-uploader",
+        "type": "Open Source Tool",
+        "status": "Published",
+        "description": "Automated WordPress article uploader with NLP-based tag generation. Upload DOCX files to WordPress sites with intelligent title processing, multi-site support, and comprehensive logging.",
+        "tech_stack": ["Python", "Selenium", "spaCy", "NLTK"],
+        "key_features": [
+          "NLP-based tag generation",
+          "Multi-site support",
+          "Automated DOCX upload",
+          "Intelligent title processing",
+          "Comprehensive logging"
+        ]
+      },
+      {
+        "name": "URL to Screenshot",
+        "url": null,
+        "github": "https://github.com/pushkarsingh32/url_to_screenshot",
+        "type": "Open Source Tool",
+        "status": "Published",
+        "description": "FastAPI service capturing high-quality screenshots of any URL using Python and Selenium.",
+        "tech_stack": ["FastAPI", "Python", "Selenium"],
+        "key_features": [
+          "RESTful API",
+          "High-quality screenshots",
+          "Efficient resource management"
+        ]
+      }
+    ],
+    "chrome_extensions": [
+      {
+        "name": "Keyword Autocomplete Magic",
+        "url": "https://chromewebstore.google.com/detail/keyword-auto-complete-mag/ocjppcomicmadlagldlinpcjipodcpii",
+        "type": "Chrome Extension",
+        "status": "Published",
+        "description": "Intelligent keyword discovery with A-Z search suggestions for SEO research."
+      },
+      {
+        "name": "Open Multiple URLs",
+        "url": "https://chromewebstore.google.com/detail/open-multiple-urls/dfanaedlfeapcalipllnkkcdboffjnap",
+        "type": "Chrome Extension",
+        "status": "Published",
+        "description": "Efficiently manage and open multiple URLs with customizable delays and grouping."
+      },
+      {
+        "name": "Domain Age Checker",
+        "url": "https://chromewebstore.google.com/detail/domain-age-checker-by-sem/gmfpkimhlpfknllbhfbcjbghmkhhgdbc",
+        "type": "Chrome Extension",
+        "status": "Published",
+        "description": "Instantly reveal website history and credibility with a single click."
+      },
+      {
+        "name": "Domain Age Finder SERP",
+        "url": "https://chromewebstore.google.com/detail/domain-age-finder-google/ckgeaghalgglnfmdfjbajmlckkkicdfm",
+        "type": "Chrome Extension",
+        "status": "Published",
+        "description": "View domain age directly in Google search results for quick analysis."
+      }
+    ]
+  },
+
+  "education": {
+    "degree": "Bachelor of Technology (B.Tech)",
+    "major": "Computer Science",
+    "institution": "THDC-IHET",
+    "graduation_year": 2016,
+    "location": "India"
+  },
+
+  "job_preferences": {
+    "roles": [
+      "Full Stack Developer",
+      "Senior Full Stack Developer",
+      "Full Stack Engineer",
+      "AI Engineer",
+      "Backend Engineer",
+      "Frontend Engineer",
+      "Software Engineer"
+    ],
+    "work_type": ["Remote", "Hybrid"],
+    "employment_type": ["Full-time", "Contract"],
+    "preferred_stack": ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS", "Cloudflare"],
+    "interested_in": [
+      "SaaS products",
+      "AI/ML applications",
+      "Scalable architecture",
+      "Early-stage startups",
+      "Product-focused companies"
+    ],
+    "salary_expectation": {
+      "currency": "USD",
+      "min": null,
+      "max": null,
+      "negotiable": true
+    }
+  },
+
+  "common_application_questions": {
+    "why_software": "I love the process of transforming complex problems into elegant, scalable solutions that impact real users. There's immense satisfaction in architecting systems from scratch - whether it's building a real-time email validation API handling millions of requests or creating multi-agent workflows. The challenge of balancing performance, scalability, and user experience while shipping fast is what drives me.",
+
+    "best_achievement": "Built and shipped 6+ production SaaS applications from scratch. Most notably, VerifyForge - an email validation API serving real users with 99%+ accuracy and sub-2s response times. Architected the entire stack using Next.js, tRPC, PostgreSQL, Redis, and BullMQ - handling real-time SMTP verification at scale.",
+
+    "biggest_technical_challenge": "Building a RAG (Retrieval-Augmented Generation) system for SemanticPen with 10k+ users. The challenge was implementing semantic search with pgvector, designing optimal chunking strategies (1000-char overlapping windows), and ensuring <3s first-token latency while maintaining factual accuracy. Solved it by optimizing vector similarity thresholds, implementing smart caching, and using sentence transformers for embeddings.",
+
+    "leadership_experience": "As CTO at Semantic Pen, led a team of 3 developers, conducted code reviews, mentored junior developers, and established Agile workflows with sprint planning and daily standups. Made architectural decisions, managed cloud infrastructure (AWS, Cloudflare), and shipped features on tight deadlines.",
+
+    "why_join": "I'm passionate about building products that solve real problems at scale. I thrive in fast-paced environments where I can own features end-to-end, make architectural decisions, and ship quickly. I'm looking for a team that values clean code, scalable architecture, and user impact.",
+
+    "availability": "Immediate / 2 weeks notice",
+
+    "relocation": "Open to relocation for the right opportunity, but prefer remote-first",
+
+    "work_authorization": "Indian citizen, may require visa sponsorship for non-remote roles outside India"
+  },
+
+  "strengths": [
+    "Full-stack expertise across modern web technologies",
+    "Proven ability to ship production SaaS applications",
+    "Strong TypeScript and type-safety advocate",
+    "Experience with AI/ML integration (LLMs, RAG, vector databases)",
+    "Fast learner and problem solver",
+    "End-to-end ownership mindset",
+    "Excellent at balancing speed with code quality"
+  ],
+
+  "ai_ml_experience": {
+    "llm_integrations": [
+      "OpenAI (GPT-4, GPT-4o)",
+      "Google Gemini",
+      "Groq",
+      "OpenRouter"
+    ],
+    "techniques": [
+      "RAG (Retrieval-Augmented Generation)",
+      "Vector embeddings with sentence transformers",
+      "Semantic search with pgvector",
+      "Prompt engineering",
+      "Streaming responses (SSE)",
+      "Context-aware generation"
+    ],
+    "projects": [
+      {
+        "name": "SemanticPen RAG System",
+        "description": "Built complete RAG pipeline with document processing (PDF, DOCX, TXT), vector embeddings, semantic search, and LLM integration",
+        "tech": ["pgvector", "Sentence Transformers", "OpenAI", "PostgreSQL"],
+        "impact": "100k+ articles generated, <3s latency, 60% cost reduction via caching"
+      },
+      {
+        "name": "Multi-LLM Integration",
+        "description": "Created adapter layer for consistent API across OpenAI, Gemini, Groq with streaming support",
+        "tech": ["OpenAI API", "Google AI", "Groq", "SSE"],
+        "impact": "Flexible provider switching, cost optimization"
+      },
+      {
+        "name": "Semantic Interlinker",
+        "description": "BERT-based tool for SEO internal linking using semantic similarity",
+        "tech": ["BERT", "Sentence Transformers", "Python"],
+        "impact": "Open source tool for SEO professionals"
+      }
+    ]
+  },
+
+  "additional_info": {
+    "languages": ["English (Fluent)", "Hindi (Native)"],
+    "hobbies": ["Building side projects", "Open source contributions", "SEO research", "Tech blogging"],
+    "interesting_facts": [
+      "Shipped first SaaS at age 24",
+      "Built and published 4 Chrome extensions",
+      "Self-taught in AI/ML and vector databases",
+      "Founded 2 startups (Degions, Techgeekers)"
+    ]
+  }
+}
