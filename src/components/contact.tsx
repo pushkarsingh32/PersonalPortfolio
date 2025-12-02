@@ -139,6 +139,16 @@ export function Contact() {
           <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-1">
             &copy; {new Date().getFullYear()} All rights reserved.
           </p>
+          <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-2">
+            <a
+              href="https://pushkarkathayat.com/pushkar_singh_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors underline"
+            >
+              View Resume
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
