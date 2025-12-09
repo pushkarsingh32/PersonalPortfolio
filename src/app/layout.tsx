@@ -48,13 +48,18 @@ export const metadata: Metadata = {
   }
 }
 
-// JSON-LD Schema
-const jsonLd = {
+// Enhanced JSON-LD Schema for better SEO
+const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': 'https://pushkarkathayat.com/#person',
   name: 'Pushkar Kathayat',
+  givenName: 'Pushkar',
+  familyName: 'Kathayat',
   jobTitle: 'Full Stack Developer',
+  description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen. Specializing in Next.js, TypeScript, and scalable web architecture.',
   url: 'https://pushkarkathayat.com',
+  image: 'https://pushkarkathayat.com/opengraph-image',
   sameAs: [
     'https://github.com/pushkarsingh32',
     'https://www.linkedin.com/in/pushkarsingh32',
@@ -71,19 +76,100 @@ const jsonLd = {
     'AWS',
     'Supabase',
     'Web Development',
-    'API Development'
+    'API Development',
+    'Software Architecture',
+    'Database Design',
+    'RESTful APIs',
+    'Authentication Systems'
   ],
-  alumniOf: 'Computer Science',
+  knowsLanguage: ['English', 'Hindi'],
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Full Stack Developer',
+    occupationLocation: {
+      '@type': 'Country',
+      name: 'Remote'
+    },
+    skills: 'Next.js, React, TypeScript, Node.js, PostgreSQL, AWS, Supabase'
+  },
+  alumniOf: {
+    '@type': 'EducationalOrganization',
+    name: 'Computer Science'
+  },
   worksFor: {
     '@type': 'Organization',
     name: 'VerifyForge',
     url: 'https://verifyforge.com'
   },
+  owns: [
+    {
+      '@type': 'WebApplication',
+      name: 'VerifyForge',
+      url: 'https://verifyforge.com',
+      description: 'Email verification and validation SaaS platform',
+      applicationCategory: 'DeveloperApplication'
+    },
+    {
+      '@type': 'WebApplication',
+      name: 'FinderLaunch',
+      url: 'https://finderlaunch.com',
+      description: 'Product launch and discovery platform',
+      applicationCategory: 'BusinessApplication'
+    },
+    {
+      '@type': 'WebApplication',
+      name: 'Real Jobs From Anywhere',
+      url: 'https://realjobsfromanywhere.com',
+      description: 'Remote job board for verified opportunities',
+      applicationCategory: 'BusinessApplication'
+    },
+    {
+      '@type': 'WebApplication',
+      name: 'Semantic Pen',
+      description: 'AI-powered writing and content creation tool',
+      applicationCategory: 'DeveloperApplication'
+    }
+  ],
   mainEntityOfPage: {
     '@type': 'WebSite',
+    '@id': 'https://pushkarkathayat.com/#website',
     name: 'Pushkar Kathayat Portfolio',
-    url: 'https://pushkarkathayat.com'
+    url: 'https://pushkarkathayat.com',
+    description: 'Portfolio showcasing full stack development projects and skills'
   }
+}
+
+// ProfilePage schema for additional SEO benefits
+const profilePageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': 'https://pushkarkathayat.com/#profilepage',
+  mainEntity: {
+    '@id': 'https://pushkarkathayat.com/#person'
+  },
+  name: 'Pushkar Kathayat - Full Stack Developer',
+  description: 'Professional portfolio of Pushkar Kathayat, Full Stack Developer specializing in SaaS applications',
+  url: 'https://pushkarkathayat.com'
+}
+
+// WebSite schema with search action
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://pushkarkathayat.com/#website',
+  name: 'Pushkar Kathayat Portfolio',
+  url: 'https://pushkarkathayat.com',
+  description: 'Portfolio showcasing full stack development projects and skills',
+  author: {
+    '@id': 'https://pushkarkathayat.com/#person'
+  },
+  inLanguage: 'en-US'
+}
+
+// Combine all schemas using @graph
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [personSchema, profilePageSchema, websiteSchema]
 }
 
 export default function RootLayout({
