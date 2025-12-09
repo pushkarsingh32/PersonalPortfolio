@@ -21,7 +21,7 @@ const skills = [
     category: "Backend",
     icon: Server,
     color: "from-emerald-500 to-teal-500",
-    technologies: ["Node.js", "Express.js", "tRPC", "Python", "FastAPI", "REST APIs", "WebSockets"]
+    technologies: ["Node.js", "Express.js", "tRPC", "Python", "Django", "FastAPI", "REST APIs", "WebSockets"]
   },
   {
     category: "Cloud & DevOps",
