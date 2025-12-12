@@ -139,7 +139,7 @@ export function Contact() {
           <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-1">
             &copy; {new Date().getFullYear()} All rights reserved.
           </p>
-          <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-2 text-sm text-zinc-400 dark:text-zinc-500">
             <a
               href="https://pushkarkathayat.com/pushkar_singh_resume.pdf"
               target="_blank"
@@ -148,7 +148,16 @@ export function Contact() {
             >
               View Resume
             </a>
-          </p>
+            <span className="hidden sm:inline">•</span>
+            <a
+              href="/Pushkar_Kathayat_Resume_Backend_Engineer.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors underline"
+            >
+              Backend Engineer Resume
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
