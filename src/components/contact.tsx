@@ -146,7 +146,7 @@ export function Contact() {
               rel="noopener noreferrer"
               className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors underline"
             >
-              View Resume
+              Full Stack Resume
             </a>
             <span className="hidden sm:inline">•</span>
             <a
