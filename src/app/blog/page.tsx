@@ -2,7 +2,7 @@ import Link from "next/link";
 import { allPosts } from "../../../.content-collections/generated";
 import { Calendar, Tag } from "lucide-react";
 import { Navbar } from "@/components/navbar";
-import { Contact } from "@/components/contact";
+import { BlogFooter } from "@/components/blog-footer";
 
 export const metadata = {
   title: "Blog | Pushkar Kathayat",
@@ -92,7 +92,7 @@ export default function BlogPage() {
           </div>
         )}
       </div>
-      <Contact />
+      <BlogFooter />
     </main>
   );
 }

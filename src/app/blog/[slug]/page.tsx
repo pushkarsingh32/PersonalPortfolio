@@ -4,7 +4,7 @@ import { allPosts } from "../../../../.content-collections/generated";
 import { MDXContent } from "@content-collections/mdx/react";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
 import { Navbar } from "@/components/navbar";
-import { Contact } from "@/components/contact";
+import { BlogFooter } from "@/components/blog-footer";
 import { MDXComponents } from "@/components/mdx-components";
 
 interface BlogPostPageProps {
@@ -132,7 +132,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </Link>
         </footer>
       </div>
-      <Contact />
+      <BlogFooter />
     </main>
   );
 }
