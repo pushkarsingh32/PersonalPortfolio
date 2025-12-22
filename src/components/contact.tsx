@@ -141,6 +141,13 @@ export function Contact() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-2 text-sm text-zinc-400 dark:text-zinc-500">
             <a
+              href="/blog"
+              className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors underline"
+            >
+              Blog
+            </a>
+            <span className="hidden sm:inline">•</span>
+            <a
               href="https://pushkarkathayat.com/pushkar_singh_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
