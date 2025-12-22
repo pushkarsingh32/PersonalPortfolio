@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { allPosts } from "../../../.content-collections/generated";
 import { Calendar, Tag } from "lucide-react";
+import { Navbar } from "@/components/navbar";
+import { Contact } from "@/components/contact";
 
 export const metadata = {
   title: "Blog | Pushkar Kathayat",
@@ -14,7 +16,8 @@ export default function BlogPage() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
+    <main className="min-h-screen bg-gradient-to-b from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
+      <Navbar />
       <div className="container mx-auto px-4 py-24 max-w-6xl">
         {/* Header */}
         <div className="mb-16 text-center">
@@ -89,6 +92,7 @@ export default function BlogPage() {
           </div>
         )}
       </div>
-    </div>
+      <Contact />
+    </main>
   );
 }

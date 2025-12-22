@@ -3,6 +3,8 @@ import Link from "next/link";
 import { allPosts } from "../../../../.content-collections/generated";
 import { MDXContent } from "@content-collections/mdx/react";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
+import { Navbar } from "@/components/navbar";
+import { Contact } from "@/components/contact";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -48,7 +50,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
+    <main className="min-h-screen bg-gradient-to-b from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950">
+      <Navbar />
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-violet-50 via-white to-zinc-50 dark:from-violet-950/20 dark:via-zinc-900 dark:to-zinc-950 border-b border-zinc-200 dark:border-zinc-800">
         <div className="container mx-auto px-4 py-16 max-w-4xl">
@@ -147,6 +150,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </Link>
         </footer>
       </div>
-    </div>
+      <Contact />
+    </main>
   );
 }
