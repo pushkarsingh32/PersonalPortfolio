@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pushkar Kathayat - Software Engineer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.45;
+      color: #1a1a1a;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 50px;
+      font-size: 10.5pt;
+    }
+    @media print {
+      body { padding: 15px 35px; font-size: 9.5pt; }
+      .no-break { page-break-inside: avoid; }
+      @page { margin: 0; }
+    }
+    h1 { font-size: 22pt; font-weight: 700; margin-bottom: 2px; color: #111; }
+    h2 { font-size: 11pt; font-weight: 600; color: #333; border-bottom: 1.5px solid #333; padding-bottom: 1px; margin: 9px 0 4px 0; text-transform: uppercase; letter-spacing: 0.8px; }
+    h3 { font-size: 10.5pt; font-weight: 600; color: #111; margin-bottom: 2px; }
+    .subtitle { font-size: 12pt; color: #444; font-weight: 500; margin-bottom: 3px; }
+    .contact { font-size: 9.5pt; color: #555; margin-bottom: 2px; }
+    .contact a { color: #0066cc; text-decoration: none; }
+    .summary { margin: 5px 0; color: #333; text-align: justify; }
+    .job { margin-bottom: 5px; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+    .job-title { font-weight: 600; color: #111; }
+    .job-company { color: #444; }
+    .job-date { color: #666; font-size: 9.5pt; }
+    .job-details { margin-top: 1px; padding-left: 16px; }
+    .job-details li { margin-bottom: 1px; color: #333; line-height: 1.35; }
+    .skills-grid { display: grid; grid-template-columns: 140px 1fr; gap: 2px 10px; font-size: 9.5pt; }
+    .skill-category { font-weight: 600; color: #333; }
+    .skill-list { color: #444; }
+    .project { margin-bottom: 3px; }
+    .project-title { font-weight: 600; color: #111; font-size: 10pt; }
+    .project-title a { color: #0066cc; text-decoration: none; }
+    .project-desc { color: #444; font-size: 9pt; margin: 0.5px 0; line-height: 1.3; }
+    .project-tech { font-size: 8.5pt; color: #666; line-height: 1.25; }
+    .education { margin-bottom: 4px; }
+    strong { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PUSHKAR KATHAYAT</h1>
+    <div class="subtitle">Software Engineer</div>
+    <div class="contact">
+      pushkarsingh32@yahoo.in |
+      <a href="https://linkedin.com/in/pushkarsingh32">linkedin.com/in/pushkarsingh32</a> |
+      <a href="https://github.com/pushkarsingh32">github.com/pushkarsingh32</a> |
+      <a href="https://pushkarkathayat.com">pushkarkathayat.com</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">Software Engineer with 4+ years building distributed systems and scalable web applications. Expertise in high-performance APIs, asynchronous job processing, database query optimization, and microservices architecture. Built 6+ production SaaS applications serving 10K+ daily users with 99.5%+ uptime using Kubernetes, AWS ECS, PostgreSQL, Redis, and BullMQ.</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-category">Languages (4+ years)</span>
+      <span class="skill-list"><strong>TypeScript/JavaScript</strong>, <strong>Python</strong>, SQL, HTML/CSS</span>
+      <span class="skill-category">Frontend</span>
+      <span class="skill-list">React (Suspense, streaming SSR, concurrent features), Next.js (App Router, Pages Router), Tailwind CSS, Responsive Design</span>
+      <span class="skill-category">Backend & APIs</span>
+      <span class="skill-list"><strong>Node.js</strong>, Express.js, tRPC, <strong>Python (FastAPI)</strong>, RESTful APIs, API versioning, OAuth 2.0, JWT, WebSockets</span>
+      <span class="skill-category">Databases</span>
+      <span class="skill-list"><strong>PostgreSQL</strong> (indexing, query optimization, RLS), <strong>Redis</strong> (caching, pub/sub), Drizzle ORM, MongoDB</span>
+      <span class="skill-category">Distributed Systems</span>
+      <span class="skill-list">Microservices architecture, message queues (BullMQ), async processing, retry mechanisms, idempotency patterns, event-driven design</span>
+      <span class="skill-category">Cloud & Infrastructure</span>
+      <span class="skill-list"><strong>AWS</strong> (Lambda, EC2, ECS, S3, SES, CloudWatch), <strong>Cloudflare</strong> (CDN, Workers, R2, Pages), Vercel, DigitalOcean</span>
+      <span class="skill-category">DevOps & Containers</span>
+      <span class="skill-list"><strong>Docker</strong>, <strong>Kubernetes</strong>, ECS auto-scaling, CI/CD (GitHub Actions), serverless deployments, multi-stage builds</span>
+      <span class="skill-category">Observability & Testing</span>
+      <span class="skill-list">Request tracing, structured logging, error monitoring, Playwright (E2E), Jest, integration testing, API testing</span>
+      <span class="skill-category">Practices</span>
+      <span class="skill-list">System design, algorithmic optimization, data structures, code reviews, technical documentation, Agile/Scrum</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Software Engineer</span> <span class="job-company">| Contract Projects (Multiple Clients) | Remote</span></div>
+        <span class="job-date">Jan 2024 - Present</span>
+      </div>
+      <ul class="job-details">
+        <li>Architected <strong>BullMQ message queue system</strong> with 7 specialized queues handling <strong>10K+ jobs daily</strong>, exponential backoff retry (3 attempts), <strong>99.9% completion rate</strong>, and 7-day dead letter queue for failure analysis</li>
+        <li>Designed <strong>dual-Redis architecture</strong> separating cache from job queues, implementing cache-aside pattern achieving <strong>70%+ hit ratio</strong>, <strong>60% database load reduction</strong>, and API latency improvement from 800ms to <strong>200ms p50</strong></li>
+        <li>Optimized <strong>PostgreSQL performance</strong> with 8+ composite indexes (org_id + timestamp) and selective column projection, reducing query latency from 2s to <strong>200ms</strong> for 10K+ daily pageviews</li>
+        <li>Built <strong>email validation API</strong> achieving <strong>sub-500ms p50</strong> (syntax) and <strong>sub-2s p99</strong> (SMTP) latency, processing 1K+ daily validations with aggressive Redis caching on 8GB VMs</li>
+        <li>Implemented <strong>async email pipeline</strong> with 4 validation gates (bounce detection, SES suppression, preferences, rate limiting) processing <strong>1K+ daily emails</strong> with automatic blocking on SES errors</li>
+        <li>Designed <strong>idempotent job processing</strong> using PostgreSQL-generated unique IDs ensuring exactly-once semantics for payment webhooks, email delivery, and credit transactions</li>
+        <li>Deployed on <strong>Kubernetes</strong> with HPA achieving <strong>99.8% uptime</strong>, auto-scaling 2-10 replicas (70% CPU threshold), and zero-downtime rolling deployments</li>
+        <li>Configured <strong>AWS ECS auto-scaling</strong> handling traffic spikes 100→500 concurrent requests with <strong>sub-30s scale-up</strong>; optimized Docker builds reducing image size 1.2GB→400MB (60% faster deploys)</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Lead Engineer / CTO</span> <span class="job-company">| Semantic Pen (AI Content Platform) | Remote</span></div>
+        <span class="job-date">Jan 2023 - Dec 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Led 3 engineers building AI platform serving <strong>10K+ users</strong> with React/Next.js, Node.js, PostgreSQL (RLS for multi-tenant isolation), and microservices on AWS (Lambda, ECS, S3, SES)</li>
+        <li>Designed <strong>normalized schema (3NF)</strong> with 14+ tables, foreign key constraints (cascade/set null), reducing data duplication by <strong>40%</strong></li>
+        <li>Integrated <strong>Paddle billing</strong> with HMAC-SHA256 webhook verification, subscription lifecycle management, usage-based metering, and idempotent processing</li>
+        <li>Built <strong>BullMQ document processing</strong> pipeline (PDF, DOCX, TXT) with stalled job recovery (120s locks), automatic re-queuing, and WebSocket status updates</li>
+        <li>Optimized <strong>Lambda cold starts</strong> from 3s to <strong>sub-800ms</strong> via package size reduction and warming strategies, handling <strong>5K+ daily invocations</strong></li>
+        <li>Established code review culture with GitHub PR workflows, technical documentation, and Agile sprints (2-week cycles, daily standups)</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Full Stack Developer</span> <span class="job-company">| YouTube Transcript Generator | Remote</span></div>
+        <span class="job-date">Mar 2023 - Jul 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Built transcription tool with <strong>React/Next.js and Python FastAPI</strong> supporting multiple export formats (TXT, SRT, VTT, JSON) and multi-language translation</li>
+        <li>Implemented <strong>Redis caching</strong> with TTL expiration (1hr transcripts, 5min API responses) reducing external API costs by <strong>60%</strong> and response times from 2s to <strong>300ms</strong></li>
+        <li>Designed <strong>background job processing</strong> for long-running tasks with progress tracking, retry logic, and webhook completion callbacks</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Co-Founder / CTO</span> <span class="job-company">| Degions (SEO Tools) | India</span></div>
+        <span class="job-date">Nov 2018 - Feb 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Built <strong>4 Chrome extensions</strong> with React/TypeScript and Node.js/Python backends serving thousands of users on AWS (EC2, S3, Lightsail)</li>
+        <li>Designed <strong>RESTful APIs</strong> with OAuth 2.0, API key auth, rate limiting (100 req/min), standardized error handling, and OpenAPI documentation</li>
+        <li>Integrated <strong>Stripe subscriptions</strong> with webhook signature verification, lifecycle management, usage-based billing, and automatic dunning</li>
+        <li>Built Python <strong>web scrapers</strong> using Scrapy with rotating proxies, exponential backoff for rate limits, and distributed workers</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Founder & Technical Lead</span> <span class="job-company">| Techgeekers Blog | India</span></div>
+        <span class="job-date">Mar 2014 - Oct 2018</span>
+      </div>
+      <ul class="job-details">
+        <li>Optimized web apps reducing page load times by <strong>50%</strong> (4s→2s) via code splitting, lazy loading, and image optimization</li>
+        <li>Implemented <strong>Cloudflare CDN</strong> reducing global TTFB by <strong>70%</strong> (400ms→120ms), serving <strong>100K+ daily requests</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Projects & Technical Achievements</h2>
+
+    <div class="project no-break">
+      <div class="project-title">VerifyForge - Email Validation SaaS | <a href="https://verifyforge.com">verifyforge.com</a></div>
+      <div class="project-desc">Multi-tenant email validation with dual-API hybrid (syntax + SMTP), PostgreSQL RLS, Redis cache-aside pattern, Stripe billing, credit metering, and composite indexes preventing duplicates</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 15, TypeScript, tRPC, PostgreSQL, Redis, BullMQ, Stripe, AWS SES | <strong>Scale:</strong> 1K+ daily, sub-500ms p50, 99.5% uptime</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Real Jobs From Anywhere - Remote Job Platform | <a href="https://realjobsfromanywhere.com">realjobsfromanywhere.com</a></div>
+      <div class="project-desc">Job aggregation with 7-queue BullMQ (email, notifications, webhooks, data processing, credits, logging, Telegram), exponential backoff, dead letter queue, audit logging with immutable event sourcing, and dual-Redis architecture</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 15, TypeScript, tRPC, PostgreSQL (14+ schemas, 8+ indexes/table), Redis, BullMQ, Better Auth, AWS | <strong>Scale:</strong> 10K+ daily pageviews, 99.9% completion, 10K+ jobs/day</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">FinderLaunch - Product Discovery Platform | <a href="https://finderlaunch.com">finderlaunch.com</a></div>
+      <div class="project-desc">Community voting with optimistic UI, background job processing, Dodo Payments with webhook verification, and feature flag system with 60s TTL caching enabling zero-downtime deployments</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 15, TypeScript, tRPC, PostgreSQL, Redis, Cloudflare Pages, Docker | <strong>Patterns:</strong> Optimistic UI, feature flags, idempotency</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Kubernetes Scraping Application</div>
+      <div class="project-desc">Containerized scraper on DigitalOcean K8s with HPA (CPU-based, 70%), health checks, rolling deployments, resource limits, and persistent volumes</div>
+      <div class="project-tech"><strong>Tech:</strong> Python, Scrapy, Docker, Kubernetes, PostgreSQL | <strong>Scale:</strong> 2-10 replicas, 99.8% uptime, 1M+ requests</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Open Source Python Tools</div>
+      <div class="project-desc"><strong>Semantic Interlinker</strong> - BERT embeddings for semantic similarity and internal linking | <strong>PAA Scraper</strong> - Google "People Also Ask" extractor with Flask API and Docker | <strong>WordPress Uploader</strong> - Automated content with NLP tag generation (spaCy)</div>
+      <div class="project-tech"><strong>Tech:</strong> Python, BERT/Transformers, Flask, Docker, spaCy, WordPress API | <strong>GitHub:</strong> github.com/pushkarsingh32</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education">
+      <strong>Bachelor of Technology (B.Tech), Computer Science</strong><br>
+      THDC-IHET | 2016
+    </div>
+  </section>
+
+</body>
+</html>
