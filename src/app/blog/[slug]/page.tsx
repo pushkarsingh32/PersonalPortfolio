@@ -5,6 +5,7 @@ import { MDXContent } from "@content-collections/mdx/react";
 import { Calendar, ArrowLeft, Tag } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Contact } from "@/components/contact";
+import { MDXComponents } from "@/components/mdx-components";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -115,27 +116,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Post Content */}
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <article className="bg-white dark:bg-zinc-900/50 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-8 md:p-12 shadow-xl shadow-zinc-100/50 dark:shadow-zinc-900/50">
-          <div className="prose prose-zinc dark:prose-invert max-w-none
-            prose-headings:font-bold prose-headings:tracking-tight
-            prose-h1:text-3xl prose-h1:mb-8 prose-h1:pb-4 prose-h1:border-b prose-h1:border-zinc-200 dark:prose-h1:border-zinc-800
-            prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-violet-900 dark:prose-h2:text-violet-100
-            prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-zinc-800 dark:prose-h3:text-zinc-200
-            prose-h4:text-lg prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-zinc-700 dark:prose-h4:text-zinc-300
-            prose-p:text-zinc-600 dark:prose-p:text-zinc-400 prose-p:leading-relaxed
-            prose-a:text-violet-600 dark:prose-a:text-violet-400 prose-a:font-medium prose-a:no-underline hover:prose-a:underline
-            prose-strong:text-zinc-900 dark:prose-strong:text-zinc-100 prose-strong:font-semibold
-            prose-code:text-violet-600 dark:prose-code:text-violet-400 prose-code:bg-violet-50 dark:prose-code:bg-violet-900/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-medium prose-code:before:content-none prose-code:after:content-none
-            prose-pre:bg-zinc-50 dark:prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-zinc-200 dark:prose-pre:border-zinc-800 prose-pre:rounded-xl
-            prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-            prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-            prose-li:text-zinc-600 dark:prose-li:text-zinc-400 prose-li:my-2
-            prose-blockquote:border-l-4 prose-blockquote:border-violet-500 prose-blockquote:bg-violet-50 dark:prose-blockquote:bg-violet-900/20 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg
-            prose-hr:border-zinc-200 dark:prose-hr:border-zinc-800 prose-hr:my-12
-            prose-table:border prose-table:border-zinc-200 dark:prose-table:border-zinc-800
-            prose-thead:bg-zinc-50 dark:prose-thead:bg-zinc-900
-            prose-th:border prose-th:border-zinc-200 dark:prose-th:border-zinc-800 prose-th:px-4 prose-th:py-2
-            prose-td:border prose-td:border-zinc-200 dark:prose-td:border-zinc-800 prose-td:px-4 prose-td:py-2">
-            <MDXContent code={post.mdx} />
+          <div className="max-w-none">
+            <MDXContent code={post.mdx} components={MDXComponents} />
           </div>
         </article>
 
