@@ -86,6 +86,24 @@ const featuredProjects = [
 
 const otherProjects = [
   {
+    title: "Medical Imaging Platform",
+    description: "Full-stack HIPAA-compliant medical imaging platform with Django REST API, Next.js frontend, AI-powered document processing, and comprehensive testing suite. Features async Celery workers, PostgreSQL optimization (85% performance gain), and Docker deployment.",
+    technologies: ["Django", "Next.js", "PostgreSQL", "OpenAI", "Celery", "Docker"],
+    github: "https://github.com/pushkarsingh32/django-medical-imaging-platform",
+    schema: {
+      "@type": "SoftwareApplication",
+      "name": "Medical Imaging Platform",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web Browser",
+      "description": "Full-stack medical imaging platform with Django REST API and AI-powered features",
+      "url": "https://github.com/pushkarsingh32/django-medical-imaging-platform",
+      "author": {
+        "@type": "Person",
+        "name": "Pushkar Kathayat"
+      }
+    }
+  },
+  {
     title: "Semantic Pen",
     description: "AI content platform with advanced LLM integration and intelligent page parsing for high-quality content generation.",
     technologies: ["Next.js", "Node.js", "LLM Integration", "AWS"],
