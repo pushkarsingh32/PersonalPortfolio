@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pushkar Kathayat - Full Stack Developer Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.45;
+      color: #1a1a1a;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 50px;
+      font-size: 10.5pt;
+    }
+    @media print {
+      body { padding: 15px 35px; font-size: 9.5pt; }
+      .no-break { page-break-inside: avoid; }
+      @page { margin: 0; }
+    }
+    h1 { font-size: 22pt; font-weight: 700; margin-bottom: 2px; color: #111; }
+    h2 { font-size: 11pt; font-weight: 600; color: #333; border-bottom: 1.5px solid #333; padding-bottom: 1px; margin: 9px 0 4px 0; text-transform: uppercase; letter-spacing: 0.8px; }
+    h3 { font-size: 10.5pt; font-weight: 600; color: #111; margin-bottom: 2px; }
+    .subtitle { font-size: 12pt; color: #444; font-weight: 500; margin-bottom: 3px; }
+    .contact { font-size: 9.5pt; color: #555; margin-bottom: 2px; }
+    .contact a { color: #0066cc; text-decoration: none; }
+    .summary { margin: 5px 0; color: #333; text-align: justify; }
+    .job { margin-bottom: 5px; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+    .job-title { font-weight: 600; color: #111; }
+    .job-company { color: #444; }
+    .job-date { color: #666; font-size: 9.5pt; }
+    .job-details { margin-top: 1px; padding-left: 16px; }
+    .job-details li { margin-bottom: 1px; color: #333; line-height: 1.35; }
+    .skills-grid { display: grid; grid-template-columns: 130px 1fr; gap: 2px 10px; font-size: 9.5pt; }
+    .skill-category { font-weight: 600; color: #333; }
+    .skill-list { color: #444; }
+    .project { margin-bottom: 3px; }
+    .project-title { font-weight: 600; color: #111; font-size: 10pt; }
+    .project-title a { color: #0066cc; text-decoration: none; }
+    .project-desc { color: #444; font-size: 9pt; margin: 0.5px 0; line-height: 1.3; }
+    .project-tech { font-size: 8.5pt; color: #666; line-height: 1.25; }
+    .education { margin-bottom: 4px; }
+    strong { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PUSHKAR KATHAYAT</h1>
+    <div class="subtitle">Full Stack Developer</div>
+    <div class="contact">
+      pushkarsingh32@yahoo.in |
+      <a href="https://linkedin.com/in/pushkarsingh32">linkedin.com/in/pushkarsingh32</a> |
+      <a href="https://github.com/pushkarsingh32">github.com/pushkarsingh32</a> |
+      <a href="https://pushkarkathayat.com">pushkarkathayat.com</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">Full Stack Developer with 4+ years of experience building production-ready SaaS applications serving thousands of users. Expert in modern web technologies including Next.js 16, React, TypeScript, and Node.js with strong backend skills in PostgreSQL, Redis, and cloud infrastructure (AWS, Cloudflare). Proven track record of shipping 6+ live SaaS products from concept to deployment, including email validation APIs, job platforms, and AI-powered content tools. Active open-source contributor to OpenClaw (5k+ stars) with merged PRs across Discord and Slack integrations. Experienced in leading engineering teams, architecting scalable systems, and integrating payment platforms (Stripe, Paddle, Dodo Payments).</p>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-category">Frontend</span>
+      <span class="skill-list">Next.js 16, React 19, TypeScript, Tailwind CSS, Shadcn UI, Radix UI, Framer Motion</span>
+      <span class="skill-category">Backend</span>
+      <span class="skill-list">Node.js, Express.js, tRPC, Python, FastAPI, Django, REST APIs, WebSockets, Hono</span>
+      <span class="skill-category">Databases</span>
+      <span class="skill-list">PostgreSQL, Drizzle ORM, Supabase, Redis, MongoDB, BullMQ</span>
+      <span class="skill-category">Cloud & DevOps</span>
+      <span class="skill-list">AWS (Lambda, EC2, ECS, S3, SES), Cloudflare (Workers, R2, Pages), Docker, Vercel, GitHub Actions CI/CD</span>
+      <span class="skill-category">Auth & Payments</span>
+      <span class="skill-list">Better Auth, OAuth 2.0, Passkeys/WebAuthn, Stripe, Paddle, Dodo Payments</span>
+      <span class="skill-category">Testing & Tools</span>
+      <span class="skill-list">Playwright, Jest, Vitest, E2E Testing, Git, React Query, Zod, Scrapy, Chrome Extensions</span>
+      <span class="skill-category">AI & Automation</span>
+      <span class="skill-list">LLM APIs (GPT, Claude), RAG pipelines, MCP servers, programmatic content generation</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Open Source Contributor</span> <span class="job-company">| <a href="https://github.com/openclaw/openclaw">OpenClaw</a> | Remote</span></div>
+        <span class="job-date">Mar 2026</span>
+      </div>
+      <ul class="job-details">
+        <li>Contributed to <strong>OpenClaw</strong>, a large-scale open-source project with 5k+ stars, 4.5k+ issues, and 5k+ pull requests</li>
+        <li>Merged <strong><a href="https://github.com/openclaw/openclaw/pull/30358">PR #30358</a></strong>: Added <strong>applied_tags support for Discord forum thread creation</strong> — implemented new <code>appliedTags</code> parameter across 6 files (types, API layer, agent tools, action handlers) with comprehensive unit tests; resolved issue where forum channels requiring tags would fail</li>
+        <li>Merged <strong><a href="https://github.com/openclaw/openclaw/pull/30266">PR #30266</a></strong>: Fixed <strong>Slack emoji shortcode parsing bug</strong> in session key display — wrapped session keys in inline code formatting to prevent Slack from misinterpreting colon-delimited segments as emoji shortcodes</li>
+        <li>Wrote <strong>comprehensive test suites</strong> using Vitest for both contributions; all existing tests (24+ thread tests, 23+ agent runner tests) continued to pass</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Full-stack Developer</span> <span class="job-company">| Verify Forge | Remote</span></div>
+        <span class="job-date">Nov 2025 - Present</span>
+      </div>
+      <ul class="job-details">
+        <li>Built <strong>Email Validation API SaaS</strong> platform with hybrid validation achieving <strong>99%+ accuracy</strong> using real-time SMTP verification, disposable detection, and syntax checks</li>
+        <li>Implemented <strong>Redis caching layer</strong> to offload database load, improving API response speed by <strong>200%</strong></li>
+        <li>Designed comprehensive dashboard with <strong>Stripe subscription management</strong>, usage tracking, credit metering, and billing portal</li>
+        <li>Architected <strong>BullMQ background job system</strong> for async email validation, webhook delivery, and notification processing</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Full Stack Developer</span> <span class="job-company">| Finder Launch | Remote</span></div>
+        <span class="job-date">Sep 2025 - Dec 2025</span>
+      </div>
+      <ul class="job-details">
+        <li>Built <strong>product discovery platform</strong> with community voting interface, product submission flow, and curated project listings</li>
+        <li>Integrated <strong>Dodo Payments</strong> with webhook verification for premium listings and subscription features</li>
+        <li>Deployed on <strong>Cloudflare Pages</strong> with Docker containerization and Redis caching for fast content delivery</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Full Stack Developer</span> <span class="job-company">| Real Jobs From Anywhere | Remote (Contract)</span></div>
+        <span class="job-date">Jul 2025 - Nov 2025</span>
+      </div>
+      <ul class="job-details">
+        <li>Architected <strong>remote job aggregation platform</strong> with 5,000+ active listings, advanced search/filtering, and email alert subscriptions</li>
+        <li>Built <strong>BullMQ system with 7 specialized queues</strong> (email, notifications, webhooks, data processing, credits, logging, Telegram) handling 10K+ jobs daily</li>
+        <li>Designed <strong>PostgreSQL schema</strong> with composite indexes and Better Auth (OAuth) for multi-tenant user management</li>
+        <li>Implemented <strong>Scrapy-based job scrapers</strong> with AWS Lambda for automated job ingestion and data processing</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Full Stack Developer</span> <span class="job-company">| YouTube Transcript Generator | Remote (Freelance)</span></div>
+        <span class="job-date">Jan 2024 - Nov 2024</span>
+      </div>
+      <ul class="job-details">
+        <li>Built transcription tool with <strong>Next.js frontend and Python FastAPI backend</strong> supporting multiple export formats (TXT, SRT, VTT, JSON)</li>
+        <li>Implemented <strong>Redis caching</strong> and background job processing reducing API costs by 60% and response times from 2s to 300ms</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Chief Technology Officer</span> <span class="job-company">| Semantic Pen | Remote (Freelance)</span></div>
+        <span class="job-date">Jan 2023 - Dec 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Built AI-powered content platform serving <strong>18,000 users</strong> generating <strong>10,000+ articles</strong> with React/Next.js, Node.js, and PostgreSQL</li>
+        <li>Developed <strong>MCP server ecosystem</strong> for seamless Claude/Cursor integration into content workflows</li>
+        <li>Led team of <strong>3 engineers</strong> - architected scalable backend handling thousands of requests/day on AWS (Lambda, ECS, S3, SES)</li>
+        <li>Integrated <strong>Paddle billing</strong> with webhook handling, subscription lifecycle management, and usage-based metering</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Programmatic Automation Blogger</span> <span class="job-company">| Hero Asian Kitchen | Full-time</span></div>
+        <span class="job-date">Jun 2022 - Mar 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Built <strong>automated content pipelines</strong> using Python, Scrapy, and AWS Lambda for programmatic content generation at scale</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Programmatic Automation Blogger</span> <span class="job-company">| Vintage Kitchen | Full-time</span></div>
+        <span class="job-date">Jan 2021 - May 2022</span>
+      </div>
+      <ul class="job-details">
+        <li>Developed <strong>programmatic SEO automation</strong> using Python, FastAPI, and GPT-2/GPT-3 for AI-assisted content generation</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <div><span class="job-title">Founder</span> <span class="job-company">| Degions (SEO Tools) | India</span></div>
+        <span class="job-date">Nov 2018 - Dec 2020</span>
+      </div>
+      <ul class="job-details">
+        <li>Built and scaled <strong>4 Chrome extensions</strong> and SEO tools with React/TypeScript frontends and Node.js/Python backends serving thousands of users</li>
+        <li>Handled entire product lifecycle: market research, design, development, deployment, Stripe payments integration, and customer support</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Open Source Contributions</h2>
+
+    <div class="project no-break">
+      <div class="project-title">OpenClaw | <a href="https://github.com/openclaw/openclaw">github.com/openclaw/openclaw</a></div>
+      <div class="project-desc"><strong>Discord: Forum thread tag support</strong> (<a href="https://github.com/openclaw/openclaw/pull/30358">PR #30358</a>, merged) — Added <code>appliedTags</code> parameter for forum/media thread creation across types, API, agent tools, and action handlers. Includes unit tests for tag passing and non-forum exclusion. +56/-6 lines across 6 files.</div>
+      <div class="project-desc"><strong>Slack: Session key emoji fix</strong> (<a href="https://github.com/openclaw/openclaw/pull/30266">PR #30266</a>, merged) — Fixed session key rendering in Slack usage footer by wrapping in inline code to prevent colon-delimited segments from being parsed as emoji shortcodes. +15/-6 lines across 4 files.</div>
+      <div class="project-tech"><strong>Tech:</strong> TypeScript, Vitest, Discord API, Slack API</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+
+    <div class="project no-break">
+      <div class="project-title">VerifyForge | <a href="https://verifyforge.com">verifyforge.com</a></div>
+      <div class="project-desc">Email Validation API SaaS with 99%+ accuracy, real-time SMTP verification, disposable detection, and subscription management.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 16, TypeScript, tRPC, PostgreSQL, Redis, BullMQ, Stripe | <strong>Cloud:</strong> Amazon EC2, S3</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">FinderLaunch | <a href="https://finderlaunch.com">finderlaunch.com</a></div>
+      <div class="project-desc">Product discovery platform with curated projects, community voting, and payment integration.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js 16, TypeScript, tRPC, PostgreSQL, Redis, Dodo Payments, Docker</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Semantic Pen | <a href="https://semanticpen.com">semanticpen.com</a></div>
+      <div class="project-desc">AI-powered content platform serving 18,000 users with RAG-based generation, MCP server ecosystem, and vector search.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js, Node.js, Django, FastAPI, PostgreSQL, Docker, AWS (EC2, Lambda, ECS, S3)</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">YouTube Transcript Generator | <a href="https://getyoutubetranscript.com">getyoutubetranscript.com</a></div>
+      <div class="project-desc">Video transcription tool with multi-language translation and export formats.</div>
+      <div class="project-tech"><strong>Tech:</strong> Next.js, Python, FastAPI, Supabase, Redis</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Django Medical Imaging Platform | <a href="https://github.com/pushkarsingh32">GitHub</a></div>
+      <div class="project-desc"><strong>HIPAA-compliant healthcare application</strong> built with Django 5.2/DRF backend, React/Next.js frontend. Celery async workers for DICOM medical image parsing, PostgreSQL (25+ composite indexes), OpenAI function calling with Pydantic-validated tools. Query optimization achieving 85% gain (1.2s→180ms). pytest at 85% coverage.</div>
+      <div class="project-tech"><strong>Tech:</strong> Django 5.2, DRF, Celery, PostgreSQL, Redis, OpenAI API, React, Next.js, Docker, AWS S3</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Semantic Interlinker | <a href="https://github.com/pushkarsingh32">GitHub</a></div>
+      <div class="project-desc"><strong>Open-source SEO tool</strong> using BERT embeddings for semantic similarity scoring and internal linking discovery across web pages.</div>
+      <div class="project-tech"><strong>Tech:</strong> Python, BERT/Transformers, Flask, Docker, NLP</div>
+    </div>
+
+    <div class="project no-break">
+      <div class="project-title">Chrome Extensions (Chrome Web Store)</div>
+      <div class="project-desc">Keyword Autocomplete Magic, Open Multiple URLs, Domain Age Checker, Domain Age Finder SERP - serving thousands of active users.</div>
+      <div class="project-tech"><strong>Tech:</strong> React, TypeScript, Chrome Extension APIs, Node.js, Stripe</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education">
+      <strong>Bachelor of Technology (B.Tech), Computer Science Engineering</strong><br>
+      THDC-IHET | 2016
+    </div>
+  </section>
+</body>
+</html>
