@@ -113,7 +113,7 @@ export function Hero() {
               <Code2 className="w-8 h-8 mb-4 text-zinc-600 dark:text-zinc-400" />
               <p className="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-3">Core Stack</p>
               <div className="flex flex-wrap gap-2">
-                {["Next.js", "TypeScript", "PostgreSQL", "tRPC"].map((tech) => (
+                {["Next.js", "TypeScript", "Django", "PostgreSQL", "tRPC"].map((tech) => (
                   <span
                     key={tech}
                     className="px-3 py-1 text-xs font-medium rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300"
