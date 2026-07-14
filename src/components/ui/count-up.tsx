@@ -23,12 +23,32 @@ export function CountUp({ value, className = "" }: CountUpProps) {
       setDisplay(target.toLocaleString())
       return
     }
+
+    let jitterControls: ReturnType<typeof animate> | undefined
+
     const controls = animate(0, target, {
       duration: 1.4,
       ease: [0.16, 1, 0.3, 1],
       onUpdate: (v) => setDisplay(Math.round(v).toLocaleString()),
+      onComplete: () => {
+        // Subtle ongoing fluctuation so settled numbers read as a live, monitored metric.
+        const wobble = Math.max(1, Math.round(target * 0.0015))
+        jitterControls = animate(
+          [target, target - wobble, target, target + wobble, target],
+          {
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            onUpdate: (v: number) => setDisplay(Math.round(v).toLocaleString()),
+          }
+        )
+      },
     })
-    return () => controls.stop()
+
+    return () => {
+      controls.stop()
+      jitterControls?.stop()
+    }
   }, [target, shouldReduceMotion])
 
   if (target === null) return <span className={className}>{value}</span>

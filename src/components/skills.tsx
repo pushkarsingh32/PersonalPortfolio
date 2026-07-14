@@ -7,42 +7,20 @@ import {
   Cloud,
   Database,
   Wrench,
-  Blocks
+  Blocks,
+  type LucideIcon,
 } from "lucide-react"
 import { StatusDot } from '@/components/ui/status-dot'
+import { skills } from '@/data/site-content'
 
-const skills = [
-  {
-    category: "Frontend",
-    icon: Blocks,
-    technologies: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "Shadcn UI", "Radix UI", "Framer Motion"]
-  },
-  {
-    category: "Backend",
-    icon: Server,
-    technologies: ["Python", "Django", "FastAPI", "Node.js", "Express.js", "tRPC", "REST APIs", "WebSockets"]
-  },
-  {
-    category: "Cloud & DevOps",
-    icon: Cloud,
-    technologies: ["AWS (Lambda, EC2, S3, SES)", "Cloudflare (Workers, R2, Pages)", "Docker", "Vercel", "Railway", "CI/CD", "GitHub Actions"]
-  },
-  {
-    category: "Database",
-    icon: Database,
-    technologies: ["PostgreSQL", "Drizzle ORM", "Supabase", "Redis", "MongoDB", "BullMQ"]
-  },
-  {
-    category: "Auth & Payments",
-    icon: Wrench,
-    technologies: ["Better Auth", "OAuth 2.0", "Passkeys/WebAuthn", "Stripe", "Dodo Payments", "Subscription Management"]
-  },
-  {
-    category: "Tools & Practices",
-    icon: Code2,
-    technologies: ["Git", "Playwright", "Jest", "React Query", "Zod", "Agile/Scrum", "Code Reviews"]
-  }
-]
+const categoryIcons: Record<string, LucideIcon> = {
+  "Frontend": Blocks,
+  "Backend": Server,
+  "Cloud & DevOps": Cloud,
+  "Database": Database,
+  "Auth & Payments": Wrench,
+  "Tools & Practices": Code2,
+}
 
 export function Skills() {
   return (
@@ -68,7 +46,7 @@ export function Skills() {
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((skill, index) => {
-          const Icon = skill.icon
+          const Icon = categoryIcons[skill.category]
           return (
             <motion.div
               key={skill.category}

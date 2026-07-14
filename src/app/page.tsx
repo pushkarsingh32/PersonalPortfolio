@@ -1,4 +1,5 @@
 import { Navbar } from '@/components/navbar'
+import { Ticker } from '@/components/ui/ticker'
 import { Hero } from '@/components/hero'
 import { Skills } from '@/components/skills'
 import { Projects } from '@/components/projects'
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
+      <Ticker />
       <Hero />
       <Skills />
       <Projects />

@@ -4,38 +4,7 @@ import { motion } from "framer-motion"
 import { GitPullRequest, ExternalLink } from "lucide-react"
 import { LinkButton } from '@/components/ui/button'
 import { StatusDot } from '@/components/ui/status-dot'
-
-const contributions = [
-  {
-    repo: "OpenClaw",
-    repoUrl: "https://github.com/openclaw/openclaw",
-    repoDescription: "Open-source AI agent framework",
-    prs: [
-      {
-        number: 30358,
-        title: "fix(discord): support applied_tags for forum thread creation",
-        description: "Added appliedTags parameter for forum/media thread creation across types, API layer, agent tools, and action handlers. Forum channels requiring tags would fail silently — this enables tag IDs to be passed during thread creation.",
-        url: "https://github.com/openclaw/openclaw/pull/30358",
-        labels: ["agents", "channel: discord", "size: S"],
-        additions: 56,
-        deletions: 6,
-        files: 6,
-        status: "merged" as const,
-      },
-      {
-        number: 30266,
-        title: "fix(slack): wrap session key in backticks to prevent emoji shortcode parsing",
-        description: "Fixed session key rendering in Slack usage footer — colon-delimited segments were being parsed as emoji shortcodes. Wrapped in inline code to prevent misinterpretation.",
-        url: "https://github.com/openclaw/openclaw/pull/30266",
-        labels: ["channel: slack", "size: XS"],
-        additions: 15,
-        deletions: 6,
-        files: 4,
-        status: "merged" as const,
-      },
-    ],
-  },
-]
+import { contributions } from '@/data/site-content'
 
 export function OpenSource() {
   return (

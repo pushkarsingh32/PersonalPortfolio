@@ -1,18 +1,13 @@
 "use client"
 
 import { useRef } from "react"
-import { motion, useMotionValue, useSpring } from "framer-motion"
+import { motion, useMotionValue, useMotionTemplate, useSpring } from "framer-motion"
 import { Button } from '@/components/ui/button'
 import { StatusDot } from '@/components/ui/status-dot'
 import { Waveform } from '@/components/ui/waveform'
 import { CountUp } from '@/components/ui/count-up'
 import Image from 'next/image'
-
-const services = [
-  { name: "VerifyForge", stat: "<2s validation" },
-  { name: "Real Jobs Anywhere", stat: "5,000+ active jobs" },
-  { name: "FinderLaunch", stat: "988+ curated projects" },
-]
+import { services, heroBio } from '@/data/site-content'
 
 function MagneticCta({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -47,8 +42,24 @@ function MagneticCta({ children }: { children: React.ReactNode }) {
 }
 
 export function Hero() {
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  const glowX = useSpring(mouseX, { stiffness: 150, damping: 25 })
+  const glowY = useSpring(mouseY, { stiffness: 150, damping: 25 })
+  const glow = useMotionTemplate`radial-gradient(550px circle at ${glowX}px ${glowY}px, hsl(var(--primary) / 0.22), transparent 70%)`
+
+  function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
+    const rect = e.currentTarget.getBoundingClientRect()
+    mouseX.set(e.clientX - rect.left)
+    mouseY.set(e.clientY - rect.top)
+  }
+
   return (
-    <section className="container flex min-h-[calc(100vh-4rem)] flex-col justify-center gap-12 pb-8 pt-24 md:pb-12 md:pt-32">
+    <section
+      onMouseMove={handleMouseMove}
+      className="container relative flex min-h-[calc(100vh-4rem)] flex-col justify-center gap-12 overflow-hidden pb-8 pt-32 md:pb-12 md:pt-40"
+    >
+      <motion.div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10" style={{ background: glow }} />
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
         {/* Left: Identity */}
         <motion.div
@@ -88,10 +99,7 @@ export function Hero() {
           </div>
 
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            I own production SaaS systems end-to-end — architected email
-            validation infrastructure, scaled a job platform to 5,000+ active
-            listings, and shipped AI content pipelines from concept to real
-            users. Currently running {services.length}+ live services.
+            {heroBio} Currently running {services.length}+ live services.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">

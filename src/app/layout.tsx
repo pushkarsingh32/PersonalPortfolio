@@ -17,7 +17,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://pushkarkathayat.com'),
   title: 'Pushkar Kathayat - Full Stack Developer',
-  description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen. Specializing in Next.js, TypeScript, and scalable web architecture.',
+  description: 'Full Stack Developer who has architected and shipped production SaaS platforms including VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen. Specializing in Next.js, TypeScript, and scalable web architecture.',
   keywords: 'Pushkar Kathayat, Full Stack Developer, Next.js, React, TypeScript, Node.js, VerifyForge, FinderLaunch, Real Jobs From Anywhere, Semantic Pen, Web Development',
   authors: [{ name: 'Pushkar Kathayat' }],
   creator: 'Pushkar Kathayat',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: '/',
     title: 'Pushkar Kathayat - Full Stack Developer',
-    description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen.',
+    description: 'Full Stack Developer who has architected and shipped production SaaS platforms including VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen.',
     siteName: 'Pushkar Kathayat Portfolio',
     images: [
       {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pushkar Kathayat - Full Stack Developer',
-    description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen.',
+    description: 'Full Stack Developer who has architected and shipped production SaaS platforms including VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen.',
     creator: '@pskt45',
     images: ['/og-image.png']
   },
@@ -66,7 +66,7 @@ const personSchema = {
   givenName: 'Pushkar',
   familyName: 'Kathayat',
   jobTitle: 'Full Stack Developer',
-  description: 'Full Stack Developer building production-ready SaaS applications. Creator of VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen. Specializing in Next.js, TypeScript, and scalable web architecture.',
+  description: 'Full Stack Developer who has architected and shipped production SaaS platforms including VerifyForge, Real Jobs From Anywhere, FinderLaunch, and Semantic Pen. Specializing in Next.js, TypeScript, and scalable web architecture.',
   url: 'https://pushkarkathayat.com',
   image: 'https://pushkarkathayat.com/opengraph-image',
   sameAs: [
@@ -105,40 +105,6 @@ const personSchema = {
     '@type': 'EducationalOrganization',
     name: 'Computer Science'
   },
-  worksFor: {
-    '@type': 'Organization',
-    name: 'VerifyForge',
-    url: 'https://verifyforge.com'
-  },
-  owns: [
-    {
-      '@type': 'WebApplication',
-      name: 'VerifyForge',
-      url: 'https://verifyforge.com',
-      description: 'Email verification and validation SaaS platform',
-      applicationCategory: 'DeveloperApplication'
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'FinderLaunch',
-      url: 'https://finderlaunch.com',
-      description: 'Product launch and discovery platform',
-      applicationCategory: 'BusinessApplication'
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'Real Jobs From Anywhere',
-      url: 'https://realjobsfromanywhere.com',
-      description: 'Remote job board for verified opportunities',
-      applicationCategory: 'BusinessApplication'
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'Semantic Pen',
-      description: 'AI-powered writing and content creation tool',
-      applicationCategory: 'DeveloperApplication'
-    }
-  ],
   mainEntityOfPage: {
     '@type': 'WebSite',
     '@id': 'https://pushkarkathayat.com/#website',

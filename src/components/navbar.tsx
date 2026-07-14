@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import { Menu, Moon, Sun, X } from "lucide-react"
 import Image from "next/image"
+import { CopyPageButton } from '@/components/ui/copy-page-button'
 
 export function Navbar() {
   const { theme, setTheme } = useTheme()
@@ -78,6 +79,8 @@ export function Navbar() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2">
+          <CopyPageButton />
+
           {/* Theme Toggle */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

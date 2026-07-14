@@ -1,36 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Twitter, ArrowUpRight } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter, ArrowUpRight, type LucideIcon } from "lucide-react"
 import { Button } from '@/components/ui/button'
 import { StatusDot } from '@/components/ui/status-dot'
+import { socialLinks } from '@/data/site-content'
 
-const socialLinks = [
-  {
-    name: "GitHub",
-    href: "https://github.com/pushkarsingh32",
-    icon: Github,
-    username: "@pushkarsingh32",
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/pushkarsingh32",
-    icon: Linkedin,
-    username: "pushkarsingh32",
-  },
-  {
-    name: "Twitter",
-    href: "https://x.com/pskt45",
-    icon: Twitter,
-    username: "@pskt45",
-  },
-  {
-    name: "Email",
-    href: "mailto:contact@pushkarkathayat.com",
-    icon: Mail,
-    username: "contact@pushkarkathayat.com",
-  }
-]
+const socialIcons: Record<string, LucideIcon> = {
+  "GitHub": Github,
+  "LinkedIn": Linkedin,
+  "Twitter": Twitter,
+  "Email": Mail,
+}
 
 export function Contact() {
   return (
@@ -76,7 +57,7 @@ export function Contact() {
           className="grid gap-3 sm:grid-cols-2"
         >
           {socialLinks.map((link, index) => {
-            const Icon = link.icon
+            const Icon = socialIcons[link.name]
             return (
               <motion.a
                 key={link.name}
