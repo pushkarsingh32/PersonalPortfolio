@@ -34,6 +34,33 @@ Two accents with distinct jobs (amber = brand/decoration, cyan = secondary/
 waveform, green = status-only semantics) — deliberately avoids the "one bright
 accent on near-black" cliché.
 
+### Light mode
+
+The existing site has a working light/dark toggle (`next-themes`); it stays.
+Dark is the primary/native mode for this concept, but light mode gets its own
+tuned values rather than being an afterthought — same roles, same signature
+(status dot + waveform), deepened accents for AA text contrast on a light
+background:
+
+| Token | Hex | Role |
+|---|---|---|
+| `paper` | `#F5F6F4` | base background (cool-neutral, not warm cream) |
+| `surface-light` | `#EAECE9` | card/row elevation |
+| `amber-light` | `#B5661E` | deepened amber — headings/CTA text-safe on paper |
+| `cyan-light` | `#1F7285` | deepened cyan — link/waveform text-safe on paper |
+| `signal-light` | `#1E8F5E` | deepened signal green — status text-safe on paper |
+| `text-light` | `#1B1F22` (primary) / `#5B6167` (muted) | body / caption text |
+
+Small decorative graphics (status dot fill, waveform stroke) may keep the more
+saturated dark-mode hues even in light mode as long as they pass a
+non-text contrast check against their immediate background — only text and
+icon-as-information uses require the deepened values above.
+
+Implementation-wise, extend the existing shadcn-style CSS custom properties in
+`src/styles/globals.css` (`--background`, `--foreground`, `--primary`, etc.)
+with new tokens (`--signal`, `--amber`, `--cyan`, `--waveform`) defined once in
+`:root` and once in `.dark`, rather than introducing a parallel token system.
+
 ### Type
 
 - Display — **Space Grotesk**, bold, tight tracking. Headlines only, used sparingly.
