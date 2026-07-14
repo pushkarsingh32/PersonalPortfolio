@@ -9,65 +9,73 @@
   }
 
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 90 10% 96.1%;
+    --foreground: 205.7 11.5% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 100 7.3% 92%;
+    --card-foreground: 205.7 11.5% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 90 10% 96.1%;
+    --popover-foreground: 205.7 11.5% 12%;
 
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 28.6 71.6% 41.4%;
+    --primary-foreground: 90 10% 96.1%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 100 7.3% 92%;
+    --secondary-foreground: 205.7 11.5% 12%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 100 7.3% 92%;
+    --muted-foreground: 210 6.2% 38%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 191.2 62.2% 32.2%;
+    --accent-foreground: 90 10% 96.1%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 90 10% 96.1%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 262.1 83.3% 57.8%;
+    --border: 100 7.3% 88%;
+    --input: 100 7.3% 88%;
+    --ring: 28.6 71.6% 41.4%;
+
+    /* Status-page signature tokens */
+    --signal: 154 65.3% 33.9%;
+    --waveform: 191.2 62.2% 32.2%;
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 204 16.1% 6.1%;
+    --foreground: 204 9.8% 80%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 206.7 17% 10.4%;
+    --card-foreground: 204 9.8% 80%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 204 16.1% 6.1%;
+    --popover-foreground: 204 9.8% 80%;
 
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
+    --primary: 30 85.4% 65.1%;
+    --primary-foreground: 204 16.1% 6.1%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 206.7 17% 10.4%;
+    --secondary-foreground: 204 9.8% 80%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 206.7 17% 10.4%;
+    --muted-foreground: 207.7 5.7% 44.5%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 191.5 48.1% 57.6%;
+    --accent-foreground: 204 16.1% 6.1%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 263.4 70% 50.4%;
+    --border: 206.7 17% 15%;
+    --input: 206.7 17% 15%;
+    --ring: 30 85.4% 65.1%;
+
+    /* Status-page signature tokens */
+    --signal: 153.1 60.2% 52.7%;
+    --waveform: 191.5 48.1% 57.6%;
   }
 }
 
@@ -83,7 +91,7 @@
 @layer utilities {
   /* Text gradient utility */
   .text-gradient {
-    @apply bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
   /* Smooth transitions */

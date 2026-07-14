@@ -1,10 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Chrome, Rocket, ExternalLink } from "lucide-react"
+import { Chrome, ArrowUpRight } from "lucide-react"
 import Script from 'next/script'
-import Image from 'next/image'
-import { LinkButton } from '@/components/ui/button'
+import { StatusDot } from '@/components/ui/status-dot'
+import { Waveform } from '@/components/ui/waveform'
 
 const featuredProjects = [
   {
@@ -299,6 +299,8 @@ export function Projects() {
     ]
   }
 
+  const services = [...featuredProjects, ...otherProjects]
+
   return (
     <>
       <Script
@@ -315,178 +317,63 @@ export function Projects() {
           viewport={{ once: true }}
           className="flex flex-col items-center gap-4 text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-            <Rocket className="w-4 h-4" />
-            <span className="text-sm font-medium">Live Products</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border">
+            <StatusDot status="live" showLabel={false} />
+            <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">services</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Featured Projects
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            Projects
           </h2>
           <p className="max-w-[600px] text-base sm:text-lg text-muted-foreground">
-            Production-ready SaaS applications serving real users
+            Production systems I've owned end-to-end — architected, scaled, and shipped to real users
           </p>
         </motion.div>
 
-        {/* Featured Projects - Large Cards */}
-        <div className="grid gap-6 lg:gap-8 mb-20">
-          {featuredProjects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-3xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300"
-            >
-              <div className="grid lg:grid-cols-5 gap-4 sm:gap-6 p-4 sm:p-6 lg:p-8">
-                {/* Left: Logo and Stats */}
-                <div className="lg:col-span-1 flex lg:flex-col items-center lg:items-start gap-3 sm:gap-4">
-                  <div className="relative w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-2xl overflow-hidden bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-2 flex items-center justify-center flex-shrink-0">
-                    {/* Light mode logo */}
-                    <Image
-                      src={project.logo.light}
-                      alt={`${project.title} logo`}
-                      width={64}
-                      height={64}
-                      className="object-contain dark:hidden"
-                    />
-                    {/* Dark mode logo */}
-                    <Image
-                      src={project.logo.dark}
-                      alt={`${project.title} logo`}
-                      width={64}
-                      height={64}
-                      className="object-contain hidden dark:block"
-                    />
-                  </div>
-                  <div className="lg:mt-4">
-                    <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Live</span>
-                    <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{project.stats}</p>
-                  </div>
+        {/* Services table */}
+        <div className="rounded-2xl border border-border overflow-hidden divide-y divide-border mb-16">
+          {services.map((project, index) => {
+            const status = project.demo ? "live" : "archived"
+            const href = project.demo ?? project.github
+
+            return (
+              <motion.a
+                key={project.title}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.04 }}
+                viewport={{ once: true }}
+                className="group grid grid-cols-1 gap-3 p-4 sm:grid-cols-[15rem_1fr_auto] sm:items-center sm:gap-6 sm:p-5 bg-background hover:bg-card transition-colors"
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <StatusDot status={status} />
+                  <span className="font-display font-semibold text-sm sm:text-base">
+                    {project.title}
+                  </span>
                 </div>
 
-                {/* Middle: Content */}
-                <div className="lg:col-span-3 space-y-3 sm:space-y-4">
-                  <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-                    <h3 className="text-xl sm:text-2xl font-bold">{project.title}</h3>
-                    <span className="px-2 py-1 text-xs font-medium rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
-                      Live
+                <div className="flex flex-col gap-1.5 min-w-0">
+                  <span className="font-mono text-xs text-muted-foreground truncate">
+                    {"stats" in project ? project.stats : project.description}
+                  </span>
+                  <Waveform className="max-w-[240px] opacity-0 transition-opacity group-hover:opacity-100" />
+                </div>
+
+                <div className="hidden flex-wrap justify-end gap-1.5 sm:flex sm:max-w-xs">
+                  {project.technologies.slice(0, 4).map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-md bg-muted px-2 py-1 font-mono text-[11px] text-muted-foreground"
+                    >
+                      {tech}
                     </span>
-                  </div>
-                  <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1.5 text-xs font-medium rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                  ))}
                 </div>
-
-                {/* Right: Action */}
-                <div className="lg:col-span-1 flex lg:flex-col lg:justify-center lg:items-end gap-3 pt-2 lg:pt-0">
-                  <LinkButton
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="primary"
-                    size="md"
-                    icon="arrowUpRight"
-                    className="px-5 py-2.5"
-                  >
-                    Visit Site
-                  </LinkButton>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Other Projects */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-8"
-        >
-          <h3 className="text-xl font-semibold mb-6">Other Projects</h3>
-        </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-20">
-          {otherProjects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="flex flex-col gap-4 p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all"
-            >
-              <div className="flex items-center gap-3">
-                {project.logo && (
-                  <div className="w-10 h-10 rounded-lg overflow-hidden bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 p-1.5 flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src={project.logo}
-                      alt={`${project.title} logo`}
-                      width={28}
-                      height={28}
-                      className="object-contain"
-                    />
-                  </div>
-                )}
-                <h4 className="text-lg font-semibold">{project.title}</h4>
-                {project.isLive && (
-                  <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
-                    Live
-                  </span>
-                )}
-              </div>
-              <p className="text-sm text-muted-foreground flex-grow">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 text-xs font-medium rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex gap-3 mt-auto pt-2">
-                {project.github && (
-                  <LinkButton
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="secondary"
-                    size="md"
-                    icon="github"
-                    iconPosition="left"
-                  >
-                    View Code
-                  </LinkButton>
-                )}
-                {project.demo && (
-                  <LinkButton
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="primary"
-                    size="md"
-                    icon="arrowUpRight"
-                  >
-                    Visit Site
-                  </LinkButton>
-                )}
-              </div>
-            </motion.div>
-          ))}
+              </motion.a>
+            )
+          })}
         </div>
 
         {/* Chrome Extensions */}
@@ -495,36 +382,31 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mb-8"
+          className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground"
         >
-          <div className="flex items-center gap-3">
-            <Chrome className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
-            <h3 className="text-xl font-semibold">Chrome Extensions</h3>
-          </div>
-          <p className="text-muted-foreground mt-2">Productivity tools available on Chrome Web Store</p>
+          <Chrome className="h-3.5 w-3.5" />
+          <span>browser extensions</span>
         </motion.div>
 
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="rounded-2xl border border-border overflow-hidden divide-y divide-border">
           {chromeExtensions.map((extension, index) => (
             <motion.a
               key={extension.title}
               href={extension.url}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.04 }}
               viewport={{ once: true }}
-              className="group flex items-center gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all"
+              className="group flex items-center gap-3 p-4 bg-background hover:bg-card transition-colors"
             >
-              <div className="p-2.5 rounded-lg bg-zinc-100 dark:bg-zinc-800">
-                <Chrome className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
-              </div>
-              <div className="flex-grow">
-                <h4 className="font-medium group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors">{extension.title}</h4>
-                <p className="text-sm text-muted-foreground">{extension.description}</p>
-              </div>
-              <ExternalLink className="w-4 h-4 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors" />
+              <StatusDot status="live" showLabel={false} />
+              <span className="flex-1 text-sm font-medium truncate">{extension.title}</span>
+              <span className="hidden max-w-xs truncate font-mono text-xs text-muted-foreground sm:block">
+                {extension.description}
+              </span>
+              <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-colors group-hover:text-foreground" />
             </motion.a>
           ))}
         </div>

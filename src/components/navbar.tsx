@@ -34,13 +34,13 @@ export function Navbar() {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled
-        ? "bg-white/80 dark:bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-200 dark:border-zinc-800"
+        ? "bg-background/80 backdrop-blur-lg border-b border-border"
         : "bg-transparent"
     }`}>
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-zinc-200 dark:border-zinc-700 shadow-md">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-border shadow-md">
             <Image
               src="/pushkar_kathayat_face_pic.png"
               alt="Pushkar Kathayat"
@@ -49,11 +49,11 @@ export function Navbar() {
             />
           </div>
           <div className="hidden sm:flex flex-col">
-            <span className="font-semibold text-sm">
+            <span className="font-display font-semibold text-sm">
               Pushkar Kathayat
             </span>
-            <span className="text-xs text-muted-foreground">
-              Full Stack Developer
+            <span className="font-mono text-xs text-muted-foreground">
+              full-stack engineer
             </span>
           </div>
         </Link>
@@ -61,7 +61,7 @@ export function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-1">
           {[
-            { href: "#skills", label: "Skills" },
+            { href: "#stack", label: "Stack" },
             { href: "#projects", label: "Projects" },
             { href: "#contact", label: "Contact" }
           ].map((item) => (
@@ -69,7 +69,7 @@ export function Navbar() {
               key={item.href}
               href={item.href}
               onClick={handleScrollTo}
-              className="px-4 py-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-card transition-colors"
             >
               {item.label}
             </Link>
@@ -81,7 +81,7 @@ export function Navbar() {
           {/* Theme Toggle */}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="relative p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+            className="relative p-2 rounded-lg hover:bg-card transition-colors"
             aria-label="Toggle theme"
           >
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
@@ -91,7 +91,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors md:hidden"
+            className="p-2 rounded-lg hover:bg-card transition-colors md:hidden"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -105,10 +105,10 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800">
+        <div className="md:hidden bg-background border-b border-border">
           <nav className="container flex flex-col py-4 gap-2">
             {[
-              { href: "#skills", label: "Skills" },
+              { href: "#stack", label: "Stack" },
               { href: "#projects", label: "Projects" },
               { href: "#contact", label: "Contact" }
             ].map((item) => (
@@ -116,7 +116,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={handleScrollTo}
-                className="px-4 py-3 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-card transition-colors"
               >
                 {item.label}
               </Link>

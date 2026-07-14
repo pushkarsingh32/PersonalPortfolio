@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, Twitter, MessageCircle, ArrowUpRight } from "lucide-react"
+import { Github, Linkedin, Mail, Twitter, ArrowUpRight } from "lucide-react"
 import { Button } from '@/components/ui/button'
+import { StatusDot } from '@/components/ui/status-dot'
 
 const socialLinks = [
   {
@@ -10,28 +11,24 @@ const socialLinks = [
     href: "https://github.com/pushkarsingh32",
     icon: Github,
     username: "@pushkarsingh32",
-    color: "hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900"
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/pushkarsingh32",
     icon: Linkedin,
     username: "pushkarsingh32",
-    color: "hover:bg-[#0077B5] hover:text-white"
   },
   {
     name: "Twitter",
     href: "https://x.com/pskt45",
     icon: Twitter,
     username: "@pskt45",
-    color: "hover:bg-zinc-900 hover:text-white dark:hover:bg-white dark:hover:text-zinc-900"
   },
   {
     name: "Email",
     href: "mailto:contact@pushkarkathayat.com",
     icon: Mail,
     username: "contact@pushkarkathayat.com",
-    color: "hover:bg-red-500 hover:text-white"
   }
 ]
 
@@ -39,90 +36,68 @@ export function Contact() {
   return (
     <section id="contact" className="container py-24 sm:py-32">
       <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
+        {/* Availability status bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="flex flex-col items-center gap-4 text-center mb-16"
+          className="flex flex-col items-center gap-4 text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
-            <MessageCircle className="w-4 h-4" />
-            <span className="text-sm font-medium">Get in Touch</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border">
+            <StatusDot status="live" showLabel={false} />
+            <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+              available for work
+            </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Let's Work Together
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            Let&apos;s Work Together
           </h2>
           <p className="max-w-[500px] text-base sm:text-lg text-muted-foreground">
-            Have a project in mind? I'm always open to discussing new opportunities and collaborations.
+            Have a project in mind? I&apos;m always open to discussing new opportunities and collaborations.
           </p>
+          <Button
+            href="mailto:contact@pushkarkathayat.com"
+            variant="primary"
+            size="lg"
+            icon="arrowUpRight"
+            withShadow
+          >
+            Send an Email
+          </Button>
         </motion.div>
 
-        {/* Contact Card */}
+        {/* Social links row */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
           viewport={{ once: true }}
-          className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-zinc-100 to-zinc-50 dark:from-zinc-900 dark:to-zinc-950 border border-zinc-200 dark:border-zinc-800 p-4 sm:p-6 lg:p-10"
+          className="grid gap-3 sm:grid-cols-2"
         >
-          <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
-            {/* Left: CTA */}
-            <div className="space-y-3 sm:space-y-4">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold">Ready to start a project?</h3>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Whether you need a full SaaS application, an API service, or technical consultation,
-                I'd love to hear about your project and see how I can help.
-              </p>
-              <Button
-                href="mailto:contact@pushkarkathayat.com"
-                variant="primary"
-                size="md"
-                icon="arrowUpRight"
-                withShadow
-                className="w-full sm:w-auto !bg-violet-600 !text-white hover:!bg-violet-700"
+          {socialLinks.map((link, index) => {
+            const Icon = link.icon
+            return (
+              <motion.a
+                key={link.name}
+                href={link.href}
+                target={link.name !== "Email" ? "_blank" : undefined}
+                rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 + index * 0.05 }}
+                viewport={{ once: true }}
+                className="group flex items-center gap-3 rounded-xl border border-border bg-background p-4 transition-colors hover:bg-card"
               >
-                Send an Email
-              </Button>
-            </div>
-
-            {/* Right: Social Links */}
-            <div className="space-y-3 sm:space-y-4">
-              <p className="text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">
-                Connect with me
-              </p>
-              <div className="grid gap-2 sm:gap-3">
-                {socialLinks.map((link, index) => {
-                  const Icon = link.icon
-                  return (
-                    <motion.a
-                      key={link.name}
-                      href={link.href}
-                      target={link.name !== "Email" ? "_blank" : undefined}
-                      rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-                      viewport={{ once: true }}
-                      className={`group flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 transition-all duration-300 ${link.color}`}
-                    >
-                      <div className="p-1.5 sm:p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 group-hover:bg-transparent transition-colors flex-shrink-0">
-                        <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </div>
-                      <div className="flex-grow min-w-0">
-                        <p className="font-medium text-sm sm:text-base">{link.name}</p>
-                        <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 group-hover:text-inherit transition-colors truncate">
-                          {link.username}
-                        </p>
-                      </div>
-                      <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-                    </motion.a>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
+                <Icon className="h-4 w-4 flex-shrink-0 text-muted-foreground" />
+                <div className="min-w-0 flex-grow">
+                  <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">{link.name}</p>
+                  <p className="truncate text-sm font-medium">{link.username}</p>
+                </div>
+                <ArrowUpRight className="h-4 w-4 flex-shrink-0 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+              </motion.a>
+            )
+          })}
         </motion.div>
 
         {/* Footer */}
@@ -131,18 +106,18 @@ export function Contact() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 text-center"
+          className="mt-16 pt-8 border-t border-border text-center"
         >
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+          <p className="text-sm text-muted-foreground">
             Designed and built by Pushkar Kathayat
           </p>
-          <p className="text-sm text-zinc-400 dark:text-zinc-500 mt-1">
+          <p className="text-sm text-muted-foreground mt-1">
             &copy; {new Date().getFullYear()} All rights reserved.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-2 text-sm text-zinc-400 dark:text-zinc-500">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-2 text-sm text-muted-foreground">
             <a
               href="/blog"
-              className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors underline"
+              className="hover:text-primary transition-colors underline"
             >
               Blog
             </a>
@@ -151,7 +126,7 @@ export function Contact() {
               href="https://pushkarkathayat.com/pushkar_singh_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors underline"
+              className="hover:text-primary transition-colors underline"
             >
               Full Stack Resume
             </a>
@@ -160,7 +135,7 @@ export function Contact() {
               href="/Pushkar_Kathayat_Resume_Backend_Engineer.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors underline"
+              className="hover:text-primary transition-colors underline"
             >
               Backend Engineer Resume
             </a>

@@ -52,6 +52,12 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        signal: "hsl(var(--signal))",
+        waveform: "hsl(var(--waveform))",
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        mono: ["var(--font-mono)", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",
