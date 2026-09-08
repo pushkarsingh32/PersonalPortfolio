@@ -1,0 +1,36 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: root
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script_stop: true
+          command_timeout: 30m
+          script: |
+            set -e
+            exec 200>/var/lock/pushkarkathayat-deploy.lock
+            flock -w 300 200
+            source /usr/local/bin/deploy-lib.sh
+
+            # Build into a fresh sibling directory. The live app at /opt/pushkarkathayat is
+            # never touched until the new build has already succeeded, so a failed or
+            # timed-out build here is a no-op, not an outage.
+            rm -rf /opt/pushkarkathayat.new
+            git clone --quiet "$(git -C /opt/pushkarkathayat remote get-url origin)" /opt/pushkarkathayat.new
+            carry_untracked_files /opt/pushkarkathayat /opt/pushkarkathayat.new
+            cd /opt/pushkarkathayat.new
+            npm install --prefer-offline
+            npm run build
+
+            finalize_deploy pushkarkathayat 3002 \
+              'pm2 restart pushkarkathayat --update-env || pm2 start npm --name "pushkarkathayat" -- start'
