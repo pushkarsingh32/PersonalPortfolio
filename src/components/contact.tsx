@@ -102,24 +102,6 @@ export function Contact() {
             >
               Blog
             </a>
-            <span className="hidden sm:inline">•</span>
-            <a
-              href="https://pushkarkathayat.com/pushkar_singh_resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors underline"
-            >
-              Full Stack Resume
-            </a>
-            <span className="hidden sm:inline">•</span>
-            <a
-              href="/Pushkar_Kathayat_Resume_Backend_Engineer.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors underline"
-            >
-              Backend Engineer Resume
-            </a>
           </div>
         </motion.div>
       </div>
