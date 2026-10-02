@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pushkar Kathayat - Senior Full-Stack Engineer Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.45;
+      color: #1a1a1a;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 50px;
+      font-size: 10.5pt;
+    }
+    @media print {
+      body { padding: 15px 35px; font-size: 9.5pt; }
+      .no-break { page-break-inside: avoid; }
+      @page { margin: 0; }
+    }
+    h1 { font-size: 22pt; font-weight: 700; margin-bottom: 2px; color: #111; }
+    h2 { font-size: 11pt; font-weight: 600; color: #333; border-bottom: 1.5px solid #333; padding-bottom: 1px; margin: 9px 0 4px 0; text-transform: uppercase; letter-spacing: 0.8px; }
+    .subtitle { font-size: 12pt; color: #444; font-weight: 500; margin-bottom: 3px; }
+    .contact { font-size: 9.5pt; color: #555; margin-bottom: 2px; }
+    .contact a { color: #0066cc; text-decoration: none; }
+    .summary { margin: 5px 0; color: #333; text-align: justify; }
+    .highlights { margin-top: 3px; padding-left: 16px; }
+    .highlights li { margin-bottom: 1.5px; color: #333; line-height: 1.35; }
+    .job { margin-bottom: 5px; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+    .job-title { font-weight: 600; color: #111; }
+    .job-company { color: #444; }
+    .job-date { color: #666; font-size: 9.5pt; }
+    .job-details { margin-top: 1px; padding-left: 16px; }
+    .job-details li { margin-bottom: 1px; color: #333; line-height: 1.35; }
+    .skills-grid { display: grid; grid-template-columns: 140px 1fr; gap: 2px 10px; font-size: 9.5pt; }
+    .skill-category { font-weight: 600; color: #333; }
+    .skill-list { color: #444; }
+    .project { margin-bottom: 3px; }
+    .project-title { font-weight: 600; color: #111; font-size: 10pt; }
+    .project-title a { color: #0066cc; text-decoration: none; }
+    .project-desc { color: #444; font-size: 9pt; margin: 0.5px 0; line-height: 1.3; }
+    .project-tech { font-size: 8.5pt; color: #666; line-height: 1.25; }
+    .education { margin-bottom: 4px; }
+    strong { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PUSHKAR KATHAYAT</h1>
+    <div class="subtitle">Senior Full-Stack Engineer | Python, TypeScript, AI Systems</div>
+    <div class="contact">
+      pushkarsingh32@yahoo.in |
+      <a href="https://linkedin.com/in/pushkarsingh32">linkedin.com/in/pushkarsingh32</a> |
+      <a href="https://github.com/pushkarsingh32">github.com/pushkarsingh32</a> |
+      <a href="https://pushkarkathayat.com">pushkarkathayat.com</a> |
+      India (remote, US hours overlap)
+    </div>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary">Full-stack engineer with <strong>8+ years of experience</strong> shipping production systems end to end: Python (FastAPI, Django) backends, TypeScript (React, Next.js) frontends, PostgreSQL schemas, queues, and the CI/CD and cloud infrastructure they run on. Currently building multi-agent LLM products in production, with RAG, evaluation and review gates, deployed on AWS ECS and Linux servers behind test-gated pipelines. Former CTO of an AI SaaS at 18,000 users. Merged contributor to a leading open-source AI agent platform. Comfortable owning a system from design through release and on-call.</p>
+  </section>
+
+  <section>
+    <h2>Selected Highlights</h2>
+    <ul class="highlights">
+      <li>Built the Python backend for a production <strong>multi-agent simulation platform orchestrating 18 LLM agents</strong> (Claude, GPT-5, Perplexity), deployed to <strong>AWS ECS Fargate via CodePipeline</strong> with separate staging and production stacks</li>
+      <li>Wrote <strong>1,200+ pytest tests</strong> around agent orchestration, evaluation and calibration logic, so prompt and model changes are caught before release</li>
+      <li>Run <strong>13 production apps across 8 domains</strong> on Linux (nginx, pm2, PostgreSQL, Redis), shipped through GitHub Actions pipelines that block deploys on failing tests and migration drift</li>
+      <li>Tuned a core PostgreSQL read path from <strong>1.2s to 180ms</strong> and cut API response times from <strong>2s to 300ms</strong> with Redis caching</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-category">Languages</span>
+      <span class="skill-list">Python, TypeScript, JavaScript, SQL</span>
+      <span class="skill-category">Backend</span>
+      <span class="skill-list">FastAPI, Django, DRF, Node.js, Pydantic, Celery, arq, BullMQ, REST, tRPC, WebSockets, OAuth 2.0, webhooks</span>
+      <span class="skill-category">Frontend</span>
+      <span class="skill-list">React, Next.js (App Router), TypeScript, React Query, Tailwind, shadcn/ui</span>
+      <span class="skill-category">Databases</span>
+      <span class="skill-list">PostgreSQL (schema design, migrations, indexing), MongoDB / DocumentDB, Redis, Kysely, Drizzle</span>
+      <span class="skill-category">Cloud &amp; DevOps</span>
+      <span class="skill-list">AWS (ECS Fargate, ECR, CodePipeline, CodeBuild, Amplify, Lambda, S3, SSM, ALB), Cloudflare (Workers, Pages), Docker, docker-compose, GitHub Actions, nginx, pm2, Linux server administration</span>
+      <span class="skill-category">AI &amp; LLMs</span>
+      <span class="skill-list">Multi-agent orchestration, RAG (knowledge bases, MMR retrieval), Claude / OpenAI / Gemini / Perplexity APIs, tool calling, MCP servers, LLM evaluation harnesses</span>
+      <span class="skill-category">Testing</span>
+      <span class="skill-list">pytest, Vitest, integration and smoke tests in CI, regression-first bug fixing</span>
+      <span class="skill-category">Practices</span>
+      <span class="skill-list">System design, production deployments, staging/prod separation, infra and secrets security audits, AI-assisted development with review gates</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Professional Experience</h2>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <span><span class="job-title">Senior Full-Stack &amp; AI Engineer</span> <span class="job-company">| AI Agents &amp; LLM Products | Remote</span></span>
+        <span class="job-date">Mar 2026 - Present</span>
+      </div>
+      <ul class="job-details">
+        <li>Built the <strong>Python FastAPI backend</strong> for a client-facing multi-agent simulation platform, orchestrating <strong>18 LLM agents</strong> across Claude, GPT-5 and Perplexity with coherence and review gates between stages, plus RAG over client documents (PDF, DOCX, web) with MMR retrieval</li>
+        <li>Shipped it on AWS: Docker images built in CodeBuild, pushed to ECR and rolled out to <strong>ECS Fargate behind an ALB through CodePipeline</strong>, with separate staging and production stacks</li>
+        <li>Built the evaluation, calibration and prompt-variant layer and covered it with <strong>1,200+ pytest tests</strong>; Next.js / TypeScript frontend auto-deployed via AWS Amplify</li>
+        <li>Built a <strong>client deliverable portal</strong> in Next.js and TypeScript on PostgreSQL (94 migrations) with Redis/BullMQ workers and an <strong>MCP server exposing 35 tools</strong> to AI clients</li>
+        <li>Built an <strong>LLM visibility audit product</strong> in Python FastAPI with arq/Redis workers, scoring brands across Gemini, GPT-4.1, Claude and Perplexity, covered by ~470 pytest tests</li>
+        <li>Set up <strong>GitHub Actions CI/CD</strong> gating every deploy on a Postgres-backed test run, migration drift check, build and smoke tests; run <strong>13 production apps across 8 domains</strong> (nginx, pm2, PostgreSQL, Redis) and wrote infra and secrets security audits</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <span><span class="job-title">Backend / Full-Stack Engineer</span> <span class="job-company">| Real Jobs From Anywhere | Remote (Contract)</span></span>
+        <span class="job-date">Jul 2025 - Nov 2025</span>
+      </div>
+      <ul class="job-details">
+        <li>Architected a job aggregation platform unifying <strong>5,000+ records</strong> from heterogeneous sources into one normalized schema</li>
+        <li>Built a <strong>7-queue BullMQ system processing 10,000+ jobs daily</strong> with retries and dead-letter handling; Python Scrapy ingestion on AWS Lambda</li>
+        <li>Designed the multi-tenant PostgreSQL schema; composite indexes took a core query from <strong>1.2s to 180ms</strong></li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <span><span class="job-title">Full-Stack Developer</span> <span class="job-company">| YouTube Transcript Generator | Remote (Freelance)</span></span>
+        <span class="job-date">Jan 2024 - Nov 2024</span>
+      </div>
+      <ul class="job-details">
+        <li>Built a transcription pipeline on Python FastAPI with background jobs and a Next.js frontend; Redis caching cut upstream API costs <strong>60%</strong> and response times from <strong>2s to 300ms</strong></li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <span><span class="job-title">Chief Technology Officer</span> <span class="job-company">| Semantic Pen | Remote</span></span>
+        <span class="job-date">Jan 2023 - Dec 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Owned architecture for an AI content SaaS serving <strong>18,000 users</strong> and generating 10,000+ articles; <strong>led 3 engineers</strong></li>
+        <li>Built the RAG pipeline with vector search, scaled the backend on AWS (Lambda, ECS, S3, SES), and integrated Paddle billing with webhooks and usage metering</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <span><span class="job-title">Backend / Automation Engineer</span> <span class="job-company">| Hero Asian Kitchen, Vintage Kitchen | Full-time</span></span>
+        <span class="job-date">Jan 2021 - Mar 2023</span>
+      </div>
+      <ul class="job-details">
+        <li>Built unattended data pipelines in Python (Scrapy, FastAPI, AWS Lambda) and integrated early LLM APIs into production workflows</li>
+      </ul>
+    </div>
+
+    <div class="job no-break">
+      <div class="job-header">
+        <span><span class="job-title">Founder</span> <span class="job-company">| Degions | India</span></span>
+        <span class="job-date">Nov 2018 - Dec 2020</span>
+      </div>
+      <ul class="job-details">
+        <li>Built and sold developer tooling to thousands of users, owning product, deployment, billing and support</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Projects &amp; Open Source</h2>
+    <div class="project no-break">
+      <div class="project-title">Open-source AI agent platform (389k+ GitHub stars)</div>
+      <div class="project-desc">Merged fixes to its Discord and Slack integrations, including forum tag support carried from the agent tool through the channel action to the Discord API, with a regression test proven to fail on the previous code.</div>
+      <div class="project-tech">Tech: TypeScript, Node.js, Vitest</div>
+    </div>
+    <div class="project no-break">
+      <div class="project-title">LLM Evaluation Harness</div>
+      <div class="project-desc">Benchmarks Claude and GPT models on accuracy, latency and cost per correct answer, turning model selection into a measured tradeoff.</div>
+      <div class="project-tech">Tech: Python, LLM APIs, evaluation and cost instrumentation</div>
+    </div>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+    <div class="job-header">
+      <span><span class="job-title">B.Tech, Computer Science Engineering</span> <span class="job-company">| THDC-IHET</span></span>
+      <span class="job-date">2016</span>
+    </div>
+  </section>
+</body>
+</html>
